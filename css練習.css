@@ -1,0 +1,43 @@
+h1 {color: rgb(4, 136, 118); font-size: 250%;}
+legend {color:#0e0d0d; font-size: 120%;}
+body {background-color: #fafaf1}
+p.sample1 {
+    color:rgb(47, 0, 255); 
+    font-size: 150%; 
+    background-color:#c0c8f7;
+    border:1px solid #5066af;
+}
+p.sample1 span {
+    text-align: right;
+    color:rgb(3, 3, 3); 
+    font-size: 50%;
+}
+p.sample2 {
+    color:rgb(150, 49, 116); 
+    font-size: 150%; 
+    background-color:#ffeaed;
+    border:1px solid #af5050;
+}
+p.sample2 span {
+    text-align: right;
+    color:rgb(3, 3, 3); 
+    font-size: 50%;
+}
+
+.bird img {
+    display:  inline-block; 
+    box-shadow: 3px 5px 5px 5px #547391;
+    }
+.bird > li {
+    display:  inline-block;     /* インラインブロック要素にする */
+    width: 250px;               /* 幅指定 */
+    vertical-align: top;    /* 要素を上下中央で揃える */
+}
+.flower img {
+    box-shadow: 3px 5px 5px 5px #7e4f69;
+    }
+.flower > li {
+    display:  inline-block;     /* インラインブロック要素にする */
+    width: 250px;               /* 幅指定 */
+    vertical-align: top;    /* 要素を上下中央で揃える */
+}
