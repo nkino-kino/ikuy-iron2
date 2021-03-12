@@ -41,4 +41,4 @@ p.sample2 span {
     width: 250px;               /* 幅指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
-.counter {box-shadow: 0px 0px;}
+div.counter img {box-shadow: 0px 0px;}
