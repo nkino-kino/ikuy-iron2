@@ -24,10 +24,10 @@ p.sample2 span {
     font-size: 50%;
 }
 p.sample3 {
-    color:#336600; 
+    color:rgb(150, 49, 116); 
     font-size: 150%; 
-    background-color:#98FB98;
-    border:1px solid #006400;
+    background-color:#ffeaed;
+    border:1px solid #af5050;
 }
 p.sample3 span {
     text-align: right;
