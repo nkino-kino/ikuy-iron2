@@ -36,7 +36,7 @@ p.sample3 span {
 }
 .bird img {
     display:  inline-block; 
-    box-shadow: 3px 5px 5px 5px #547391;
+    box-shadow: 3px 5px 5px 5px #96b4d3;
     }
 .bird > li {
     display:  inline-block;     /* インラインブロック要素にする */
@@ -44,7 +44,7 @@ p.sample3 span {
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 .flower img {
-    box-shadow: 3px 5px 5px 5px #7e4f69;
+    box-shadow: 3px 5px 5px 5px #dd8cb8;
     }
 .flower > li {
     display:  inline-block;     /* インラインブロック要素にする */
@@ -52,7 +52,7 @@ p.sample3 span {
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 .album img {
-    box-shadow: 3px 5px 5px 5px #006400;
+    box-shadow: 3px 5px 5px 5px #9df39d;
     }
 .album > li {
     display:  inline-block;     /* インラインブロック要素にする */
