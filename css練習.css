@@ -49,4 +49,12 @@ p.sample2 span {
     width: 250px;               /* 幅指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
+.flower3 img {
+    box-shadow: 3px 5px 5px 5px #7e4f69;
+    }
+.flower3 > li {
+    display:  inline-block;     /* インラインブロック要素にする */
+    width: 250px;               /* 幅指定 */
+    vertical-align: top;    /* 要素を上下中央で揃える */
+}
 div.counter img {box-shadow: none;}
