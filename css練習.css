@@ -10,7 +10,7 @@ p.sample1 {
 p.sample1 span {
     text-align: right;
     color:rgb(3, 3, 3); 
-    font-size: 50%;
+    font-size: 70%;
 }
 p.sample2 {
     color:rgb(150, 49, 116); 
@@ -21,7 +21,7 @@ p.sample2 {
 p.sample2 span {
     text-align: right;
     color:rgb(3, 3, 3); 
-    font-size: 50%;
+    font-size: 70%;
 }
 p.sample3 {
     color:rgb(150, 49, 116); 
@@ -44,7 +44,7 @@ p.sample3 span {
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 .flower img {
-    box-shadow: 3px 5px 5px 5px #e9967a;
+    box-shadow: 3px 5px 5px 5px #cd5c5c;
     }
 .flower > li {
     display:  inline-block;     /* インラインブロック要素にする */
