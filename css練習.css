@@ -10,7 +10,7 @@ font-family: "游ゴシック","メイリオ",sans-serif ;
     bottom: 20px;
     left: 50px;
     padding: 0px;
-    font-size: 250%;
+    font-size: 350%;
     color: #a3ffa3;
     font-family: "ヒラギノ角ゴ StdN W8", 'arial black';
     font-weight: bold; /*太字に*/
@@ -34,7 +34,7 @@ p.sample1 {
 p.sample1 span {
     text-align: right;
     color:rgb(3, 3, 3); 
-    font-size: 70%;
+    font-size: 50%;
 }
 p.sample2 {
     color:rgb(150, 49, 116); 
@@ -45,7 +45,7 @@ p.sample2 {
 p.sample2 span {
     text-align: right;
     color:rgb(3, 3, 3); 
-    font-size: 70%;
+    font-size: 50%;
 }
 p.sample3 {
     color:rgb(150, 49, 116); 
@@ -56,7 +56,7 @@ p.sample3 {
 p.sample3 span {
     text-align: right;
     color:rgb(3, 3, 3); 
-    font-size: 70%;
+    font-size: 50%;
 }
 .bird img {
     display:  inline-block; 
@@ -64,7 +64,7 @@ p.sample3 span {
     }
 .bird > li {
     display:  inline-block;     /* インラインブロック要素にする */
-    width: 250px;               /* 幅指定 */
+    width: 300px;               /* 幅指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 .flower img {
@@ -72,7 +72,7 @@ p.sample3 span {
     }
 .flower > li {
     display:  inline-block;     /* インラインブロック要素にする */
-    width: 250px;               /* 幅指定 */
+    width: 300px;               /* 幅指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 .album img {
@@ -80,7 +80,7 @@ p.sample3 span {
     }
 .album > li {
     display:  inline-block;     /* インラインブロック要素にする */
-    margin: 0 60px 0 0;               /* 間隔指定 */
+    margin: 0 70px 0 0;               /* 間隔指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 
