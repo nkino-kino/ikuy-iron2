@@ -63,7 +63,7 @@ p.sample3 span {
     }
 .bird > li {
     display:  inline-block;     /* インラインブロック要素にする */
-    width: 330px;               /* 幅指定 */
+    width: 280px;               /* 幅指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 .flower img {
@@ -71,7 +71,7 @@ p.sample3 span {
     }
 .flower > li {
     display:  inline-block;     /* インラインブロック要素にする */
-    width: 330px;               /* 幅指定 */
+    width: 280px;               /* 幅指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 .album img {
