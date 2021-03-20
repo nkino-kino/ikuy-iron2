@@ -52,7 +52,7 @@ function keisan() {
     //document.write('b=' + b + "<br>\n");
     //document.write('c=' + c + "<br>\n");
     //document.write('d=' + d + "<br>\n");
-    document.write('a,b,c,d' + "<br>\n");
+    //document.write('a,b,c,d' + "<br>\n");
     if (a + b + c + d == 10) { document.write(elem+"："+"a+b+c+d" + "<br>\n"); }
     if (a + b + c - d == 10) { document.write(elem + "：" +"a+b+c-d" + "<br>\n"); }
     if (a + b + c * d == 10) { document.write(elem + "：" +"a+b+c*d" + "<br>\n"); }
