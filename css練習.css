@@ -63,7 +63,7 @@ p.sample3 span {
     }
 .bird > li {
     display:  inline-block;     /* インラインブロック要素にする */
-    width: 280px;               /* 幅指定 */
+    width: 250px;               /* 幅指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 .flower img {
