@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="maketen3.js"></script>
+    </head>
+
+    <body>
+    
+        <h1>プログラミングの練習のページ2</h1>
+        <p>テンパズル（メイクテン）です。</p>
+        <p>下の4つの数字をランダムに生成しました。</p>
+        <p>四則演算で10を作ってください。</p>
+        <!--div>
+            <button onclick="suuji()">数字</button>
+        </div-->
+      
+        <script>
+            var min = 1000;
+            var max = 9999;
+            var a = Math.floor(Math.random() * (max + 1 - min)) + min;
+            var x = parseInt(a)
+            document.write(x)
+        </script>
+        <br>
+        <br>
+    <div>
+        <button onclick="keisan()">回答例</button>
+    </div>
+    <div id="gamen"></div>
+        <br>
+
+    <a href="index.html">ホームへ戻る 　</a>
+    </body>
+</html>
