@@ -1,7 +1,7 @@
 function keisan() {
     text01 = document.getElementById('atai');
     x = parseInt(text01.value);
-	document.write('戻るときはブラウザの戻るボタンで' +  "<br>\n");
+	document.write('戻るときはブラウザの「リロード」ボタンで' +  "<br>\n");
     document.write('問題' + x + "<br>\n");
     stringx = String(x)
     var text_array = Array.from(stringx);
