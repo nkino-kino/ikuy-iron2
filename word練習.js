@@ -7,8 +7,7 @@ function worddisplay(){
     xhr.open("get", "eitango5001.csv", true);
     xhr.send(null);
 }
-var fn = worddisplay();
-setInterval(fn,5000);
+worddisplay();
 
 function createArray(csvData) {
 	var csvArray = [];
