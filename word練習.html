@@ -15,12 +15,20 @@
   	setInterval("worddisplay()",5000);
 	}
 	</script>
+	<script>
+	function stopfnc(){
+  	clearInterval("worddisplay()");
+	}
+	</script>
 	<p>r5秒おきに新しい単語に変わる。集中！</p>
 	<br>
 	<div class="button">
 	<input type="button" value="START" onclick="startfnc()"/>
 	</div>
 	<br>
+	<div class="button">
+	<input type="button" value="STOP" onclick="stopfnc()"/>
+	</div>
 	<div id = "word" style="font-size: large"></div> 
 	<br>
 	<div id = "pron"></div>
