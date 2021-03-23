@@ -21,9 +21,9 @@ function createArray(csvData) {
 	mondai.innerHTML=(x);
 }
 	
-function keisan(x) {
-    document.write('戻るときはブラウザのリロードボタンで' +  "<br>\n");
-    document.write('問題 ' + x + "<br>\n");
+function keisan() {
+	document.write('問題 ' + x + "<br>\n");
+    
     var stringx = String(x)
     var text_array1 = Array.from(stringx);
 
@@ -196,6 +196,8 @@ function keisan(x) {
     if (a / b / c - d == 10) { document.write(elem + "：" +"a/b/c-d" + "<br>\n"); }
     if (a / b / c * d == 10) { document.write(elem + "：" +"a/b/c*d" + "<br>\n"); }
     if (a / b / c / d == 10) { document.write(elem + "：" +"a/b/c/d" + "<br>\n"); }
+	    
+	    document.write('戻るときはブラウザのリロードボタンで' +  "<br>\n");
 }
 }
 
