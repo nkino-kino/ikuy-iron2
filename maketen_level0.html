@@ -2,7 +2,7 @@
 <html>
     <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
- <script src="maketen7.js"></script>
+ <script src="maketen3.js"></script>
     </head>
 
     <body>
@@ -10,12 +10,33 @@
         <h1>プログラミングの練習のページ3</h1>
         <p>テンパズル（メイクテン）です。</p>
 	    <br>
-	    <p>問題</p>
+	    <script>
+		    function maketen() {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+    createArray(xhr.responseText);
+    };
+ 
+    xhr.open("get", "maketen_level1.csv", true);
+    xhr.send(null);
+}
+maketen();
+ function createArray(csvData) {
+	var csvArray = [];
+	var tempArray = csvData.split("\n");
+    for(var i = 0; i<tempArray.length;i++){
+	csvArray[i] = tempArray[i].split(",");
+	}
+	var x = (csvArray[Math.floor(Math.random() * csvArray.length)][0]);
+	document.write(x);
+}
+	</script>
+	    
 	    <br>
 	<div class="suuji" id="mondai"></div>
 		<br>
    		 <br>
-	<div><input type=" button"  class="btn1" onclick="maketen()">回答例</div>
+	<button class="btn1" onclick="maketen()">回答例</button>
     <br>
     <br>    
     <br>
