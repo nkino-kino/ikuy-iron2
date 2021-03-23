@@ -11,7 +11,7 @@
         <p>テンパズル（メイクテン）です。</p>
 	    <br>
 	    <script>
-		    function maketen() {
+		  var x =  function maketen() {
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
     createArray(xhr.responseText);
@@ -27,8 +27,8 @@ maketen();
     for(var i = 0; i<tempArray.length;i++){
 	csvArray[i] = tempArray[i].split(",");
 	}
-	var x = (csvArray[Math.floor(Math.random() * csvArray.length)][0]);
-	 var mondai = document.getElementById("mondai");
+	 x = (csvArray[Math.floor(Math.random() * csvArray.length)][0]);
+	mondai = document.getElementById("mondai");
 	mondai.innerHTML=(x);
 	 //document.write(x);
 }
