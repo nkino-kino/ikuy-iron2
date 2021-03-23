@@ -7,7 +7,7 @@ function maketen() {
     xhr.open("get", "maketen_level1.csv", true);
     xhr.send(null);
 }
-maketen();
+//maketen();
  
 function createArray(csvData) {
 	var csvArray = [];
