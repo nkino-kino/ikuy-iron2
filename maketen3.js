@@ -9,14 +9,14 @@ function keisan() {
     */
 	document.write('戻るときはブラウザのリロードボタンで' +  "<br>\n");
     document.write('問題' + x + "<br>\n");
-    stringx = String(x)
-    var text_array = Array.from(stringx);
-    var kumiawase = [];
+    var stringx = String(x)
+    var text_array1 = Array.from(stringx);
+
     //document.write('配列' + text_array + "<br>\n");
-    var x0 = parseInt(text_array[0]);
-    var x1 = parseInt(text_array[1]);
-    var x2 = parseInt(text_array[2]);
-    var x3 = parseInt(text_array[3]);
+    var x0 = parseInt(text_array1[0]);
+    var x1 = parseInt(text_array1[1]);
+    var x2 = parseInt(text_array1[2]);
+    var x3 = parseInt(text_array1[3]);
     var s01 = [x0,x1,x2,x3]
     var s02 = [x0, x1, x3, x2]
     var s03 = [x0, x2, x1, x3]
