@@ -10,8 +10,8 @@
         <h1>プログラミングの練習のページ3</h1>
         <p>テンパズル（メイクテン）です。</p>
 	    <br>
-	    <script>
-		  var x =  function maketen() {
+ <script>
+	var x =  function maketen() {
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
     createArray(xhr.responseText);
@@ -20,7 +20,7 @@
     xhr.open("get", "maketen_level1.csv", true);
     xhr.send(null);
 }
-maketen();
+//maketen();
  function createArray(csvData) {
 	var csvArray = [];
 	var tempArray = csvData.split("\n");
