@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
 .btn1 {
-  width:15%;
-  font-size:100%;
+  width:30%;
+  font-size:200%;
   color:#FFFFFF;
   text-align:center;
   display:block;
@@ -11,8 +11,8 @@
   border-radius: 10px;
 }
 .btn2 {
-  width:15%;
-  font-size:100%;
+  width:30%;
+  font-size:200%;
   color:#FFFFFF;
   text-align:center;
   display:block;
