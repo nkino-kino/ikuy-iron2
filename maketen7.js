@@ -22,19 +22,11 @@ function createArray(csvData) {
 }
 	
 function keisan() {
-	/*
-    var min = 1000 ;
-	var max = 9999 ;
-    var a = Math.floor( Math.random() * (max + 1 - min) ) + min ;
-    text01 = document.getElementById('atai');
-    x = parseInt(text01.value);
-    */
     document.write('戻るときはブラウザのリロードボタンで' +  "<br>\n");
     document.write('問題 ' + x + "<br>\n");
     var stringx = String(x)
     var text_array1 = Array.from(stringx);
 
-    //document.write('配列' + text_array + "<br>\n");
     var x0 = parseInt(text_array1[0]);
     var x1 = parseInt(text_array1[1]);
     var x2 = parseInt(text_array1[2]);
@@ -68,19 +60,13 @@ function keisan() {
     var s24 = [x3, x2, x1, x0]
 
     var S =[s01,s02,s03,s04,s05,s06,s07,s08,s09,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24];
-    //document.write(s01+ "<br>\n" + s02 + "<br>\n");
     for (const elem of S){
     var text_array = Array.from(elem);
-    //document.write('配列' + text_array + "<br>\n");
     var a = parseInt(text_array[0]);
     var b = parseInt(text_array[1]);
     var c = parseInt(text_array[2]);
     var d = parseInt(text_array[3]);
-    //document.write('a=' + a + "<br>\n");
-    //document.write('b=' + b + "<br>\n");
-    //document.write('c=' + c + "<br>\n");
-    //document.write('d=' + d + "<br>\n");
-    //document.write('答え' + "<br>\n");
+
     if (a + b + c + d == 10) { document.write(elem+"："+"a+b+c+d" + "<br>\n"); }
     if (a + b + c - d == 10) { document.write(elem + "：" +"a+b+c-d" + "<br>\n"); }
     if (a + b + c * d == 10) { document.write(elem + "：" +"a+b+c*d" + "<br>\n"); }
