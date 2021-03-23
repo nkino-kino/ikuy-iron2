@@ -21,7 +21,7 @@ function createArray(csvData) {
 	mondai.innerHTML=(x);
 }
 	
-function keisan() {
+function keisan(x) {
     document.write('戻るときはブラウザのリロードボタンで' +  "<br>\n");
     document.write('問題 ' + x + "<br>\n");
     var stringx = String(x)
