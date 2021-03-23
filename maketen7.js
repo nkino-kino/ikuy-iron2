@@ -19,9 +19,7 @@ function createArray(csvData) {
 
 	var mondai = document.getElementById("mondai");
 	mondai.innerHTML=(x);
-}
-	
-function keisan() {
+
 	document.write('問題 ' + x + "<br>\n");
 	document.write('戻るときはブラウザのリロードボタンで' +  "<br>\n");
     
