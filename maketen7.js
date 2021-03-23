@@ -4,7 +4,7 @@ function maketen() {
     createArray(xhr.responseText);
     };
  
-    xhr.open("get", "maketen_level0.csv", true);
+    xhr.open("get", "maketen_level1.csv", true);
     xhr.send(null);
 }
 maketen();
