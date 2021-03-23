@@ -17,6 +17,7 @@ function createArray(csvData) {
 	}
 	var x = (csvArray[Math.floor(Math.random() * csvArray.length)][0]);
 
-	document.write(x);
+	var mondai = document.getElementById("mondai");
+	mondai.innerHTML=(x);
 }
 	
