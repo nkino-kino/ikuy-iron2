@@ -1,27 +1,42 @@
 @charset "UTF-8";
 /* CSS Document */
-.button {
- width:150px;
- height:30px;
+body {
+font-family: "游ゴシック","メイリオ",sans-serif ;
+}
+.btn1 {
+ width:30%;
+ height:30%;
  line-height:30px;
  text-align:center;
  display:inline-block;
- background:#9b4dca;
+ background:blue;
+ color:#fff;
+font-size:150%;
+ border-radius:5px;
+ text-decoration:none;
+}
+.btn2 {
+ width:30%;
+ height:30%;
+ line-height:30px;
+ text-align:center;
+ display:inline-block;
+ background:red;
+	font-size:150%;
  color:#fff;
  border-radius:5px;
  text-decoration:none;
 }
-
-
-
-.title p {
-    position: absolute;
+p1{
+	font-size: 80%;
+}
+.suuji {
+    position: relative;
     bottom: 20px;
-    left: 50px;
+    left: 10px;
     padding: 0px;
     font-size: 250%;
-    color: #a3ffa3;
-    font-family: "ヒラギノ角ゴ StdN W8", 'arial black';
+    color: black;
     font-weight: bold; /*太字に*/
-    text-shadow: black 3px 3px 0px;
+    /*text-shadow: black 3px 3px 0px;*/
 }
