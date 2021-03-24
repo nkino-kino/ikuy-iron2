@@ -12,7 +12,7 @@ font-family: "游ゴシック","メイリオ",sans-serif ;
  background:blue;
  color:#fff;
 font-size:150%;
- border-radius:5px;
+ border-radius:10px;
  text-decoration:none;
 }
 .btn2 {
@@ -24,7 +24,7 @@ font-size:150%;
  background:red;
 	font-size:150%;
  color:#fff;
- border-radius:5px;
+ border-radius:10px;
  text-decoration:none;
 }
 
@@ -37,7 +37,7 @@ font-size:150%;
  background:purple;
  color:#fff;
 font-size:150%;
- border-radius:5px;
+ border-radius:10px;
  text-decoration:none;
 }
 .btn4 {
@@ -49,7 +49,7 @@ font-size:150%;
  background:green;
 	font-size:150%;
  color:#fff;
- border-radius:5px;
+ border-radius:10px;
  text-decoration:none;
 }
 p1{
