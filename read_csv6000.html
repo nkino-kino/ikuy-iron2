@@ -17,15 +17,15 @@
 		<div class="eitango" id="word"></div><br>
 	<script>
 		function trandpro(){
-			var translate = document.getElementById("translate");
-			translate.innerHTML=(csvArray[x][2]);
+			var tra = document.getElementById("tra");
+			tra.innerHTML=(csvArray[x][2]);
 			var pron = document.getElementById("pron");
 			pron.innerHTML=(csvArray[x][3]);
 		}
 	</script>
 		<button class="btn2" onclick="trandpro()">発音・意味</button><br>
 		<div id="pron"></div><br>
-		<div id="translate"></div><br>
+		<div id="tra"></div><br>
 		
 		<br>
 	<script>
