@@ -30,8 +30,8 @@ function createArray(csvData) {
 		
 	var word = document.getElementById("word");
 	word.innerHTML=(csvArray[x][1]);
-	var translate = document.getElementById("translate");
-	translate.innerHTML=(csvArray[x][2]);
+	var tra = document.getElementById("tra");
+	tran.innerHTML=(csvArray[x][2]);
 	var pron = document.getElementById("pron");
 	pron.innerHTML=(csvArray[x][3]);
 
