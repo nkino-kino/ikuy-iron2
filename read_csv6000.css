@@ -65,3 +65,13 @@ p1{
     font-weight: bold; /*太字に*/
     /*text-shadow: black 3px 3px 0px;*/
 }
+.pro {
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+    padding: 0px;
+    font-size: 150%;
+    color: black;
+    font-weight: bold; /*太字に*/
+    /*text-shadow: black 3px 3px 0px;*/
+}
