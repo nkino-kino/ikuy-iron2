@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>英単語6000</title>
+<link rel="stylesheet" type="text/css" href="read_csv6000.css">
+	<script src="read_csv6000.js"></script>
+	<script src="要素取得2.js"></script>
+	</head>
+
+<body>
+	<h1>プログラミング練習　英単語</h1>
+	<p>記録と復習の機能を付けてみた。記憶する機能はないので、その場限り。</p>
+		<br>
+	<button class="btn1" onclick="word()">表示</button>
+		<br><br><br>
+		<div class="eitango" id="word"></div><br>
+	<script>
+		function trandpro(){
+			var translate = document.getElementById("translate");
+			translate.innerHTML=(csvArray[x][2]);
+			var pron = document.getElementById("pron");
+			pron.innerHTML=(csvArray[x][3]);
+		}
+	</script>
+		<button class="btn2" onclick="trandpro()">発音・意味</button><br>
+		<div id="pron"></div><br>
+		<div id="trnslate"></div><br>
+		
+		<br>
+	<script>
+		var rec=[];
+		var rec0=[];
+		var rec1=[];
+		var rec2=[];
+		var rec3=[];
+	function record(){
+		rec.push(x);
+		rec0.push(t1[x][0]);
+		rec1.push(t1[x][1]);
+		rec2.push(t1[x][2]);
+		rec3.push(t1[x][3]);
+		//var reco = document.getElementById("reco");
+		//reco.innerHTML=(rec);
+		//var reco0 = document.getElementById("reco0");
+		//reco0.innerHTML=(rec0);
+		var reco1 = document.getElementById("reco1");
+		reco1.innerHTML=(rec1);
+		//var reco2 = document.getElementById("reco2");
+		//reco2.innerHTML=(rec2);
+		//var reco3 = document.getElementById("reco3");
+		//reco3.innerHTML=(rec3);
+	}
+	</script>
+	<button class="btn3" onclick="record()">記録</button><br>
+	<br>
+	<div id="reco1"></div>
+	<br>
+	<button class="btn4" onclick="hyouji2()">復習</button>
+		<br>
+		<br>
+		<div id="word1"></div>
+		<div id="tr1"></div>
+		<div id="pron1"></div>
+		<br>
+	<br>
+</body>
+</html>
+
