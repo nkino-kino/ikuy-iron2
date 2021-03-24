@@ -26,7 +26,7 @@ function createArray(csvData) {
 	var min = 1;
 	var max = 1001;
 	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
-	var x = parseInt(a);
+	x = parseInt(a);
 		
 	var word = document.getElementById("word");
 	word.innerHTML=(csvArray[x][1]);
