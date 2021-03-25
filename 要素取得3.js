@@ -9,12 +9,6 @@ var pron1 = document.getElementById("pron1");
 	pron1.innerHTML=("意味:  "+rec3[y]);
 	y++;
 }
-	else if (y==rec.length){
-word1.innerHTML=("back to the first");
-tr1.innerHTML=("");
-pron1.innerHTML=("");
-y=0;
-}
 	else{
 		y=0;
 	word1.innerHTML=("英単語:  "+rec1[y]);
