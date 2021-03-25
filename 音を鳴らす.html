@@ -9,23 +9,32 @@
 		<title>音が鳴るボタン</title>
 	</head>
 <body>
-<h1 style="text-align:center;color:#d36015;">10秒から1分間隔で音が鳴ります</h1>
+<h1 style="text-align:center;color:#d36015;">表示の時間間隔で音が鳴ります</h1>
 <p>これは便利かも！？ストレッチなどの運動に。</p>
 <p>終わらせ方がわからんので、終了は「リロード」か「ホームに戻る」で。</p>
 
 <!--hr style="margin: 3em 0 ;"-->
 <br><br>
 <input type="button" class="btn1" onclick="startfnc10()" value="10秒間隔"/>
-	<br><br>
-	<input type="button" class="btn2" onclick="startfnc20()" value="20秒間隔"/>
-	<br><br>
-	<input type="button" class="btn3" onclick="startfnc30()" value="30秒間隔"/>
-	<br><br>
-	<input type="button" class="btn4" onclick="startfnc60()" value="1分間隔"/>
+	<br>
+	<div id="count10"></div>
+	<br>
+	<input type="button" class="btn2" onclick="startfnc20()" value="20秒"/>
+	<br>
+	<div id="count20"></div>
+	<br>
+	<input type="button" class="btn3" onclick="startfnc30()" value="30秒"/>
+	<br>
+	<div id="count30"></div>
+	<br>
+	<input type="button" class="btn4" onclick="startfnc60()" value="1分"/>
+	<br>
+	<div id="count60"></div>
+	<br>
  <br>
 
 <audio id="sound-file" preload="auto">
-	<source src="Countdown05-1.mp3" type="audio/mp3">
+	<!--source src="Countdown05-1.mp3" type="audio/mp3"-->
 	<source src="paddbeep.wav" type="audio/wav">
 </audio>
 
@@ -36,22 +45,27 @@
 <script>
 	function startfnc10(){
   	setInterval("sound()",10000);
+	var count10=document.getElementById("count10")
+	count10.innerHTML = ("カウント中");
 	}
 	</script>
 	<script>
 	function startfnc20(){
   	setInterval("sound()",20000);
-	}
+	var count20=document.getElementById("count20")
+	count20.innerHTML = ("カウント中");}
 	</script>
 	<script>
 	function startfnc30(){
   	setInterval("sound()",30000);
-	}
+	var count30=document.getElementById("count30")
+	count30.innerHTML = ("カウント中");}
 	</script>
 	<script>
 	function startfnc60(){
   	setInterval("sound()",60000);
-	}
+	var count60=document.getElementById("count60")
+	count60.innerHTML = ("カウント中");}
 	</script>
 	<br>
 	<br>
