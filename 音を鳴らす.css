@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+font-family: "游ゴシック","メイリオ",sans-serif ;
+}
+.btn1 {
+ width:30%;
+ height:30%;
+ line-height:30px;
+ text-align:center;
+ display:inline-block;
+ background:blue;
+ color:#fff;
+font-size:150%;
+ border-radius:5px;
+ text-decoration:none;
+}
+.btn2 {
+ width:30%;
+ height:30%;
+ line-height:30px;
+ text-align:center;
+ display:inline-block;
+ background:red;
+	font-size:150%;
+ color:#fff;
+ border-radius:5px;
+ text-decoration:none;
+}
+.btn3 {
+ width:30%;
+ height:30%;
+ line-height:30px;
+ text-align:center;
+ display:inline-block;
+ background:green;
+	font-size:150%;
+ color:#fff;
+ border-radius:5px;
+ text-decoration:none;
+}
+.btn4 {
+ width:30%;
+ height:30%;
+ line-height:30px;
+ text-align:center;
+ display:inline-block;
+ background:purple;
+	font-size:150%;
+ color:#fff;
+ border-radius:5px;
+ text-decoration:none;
+}
