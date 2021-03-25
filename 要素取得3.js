@@ -1,6 +1,6 @@
 var y = 0;
 function hyouji2(){
-	if (y< rec.length){
+	if (y< rec1.length){
 var word1 = document.getElementById("word1");
 	word1.innerHTML=("英単語:  "+rec1[y]);
 var tr1 = document.getElementById("tr1");
