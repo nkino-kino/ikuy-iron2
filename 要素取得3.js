@@ -11,6 +11,8 @@ var pron1 = document.getElementById("pron1");
 }
 	else if (y==rec.length){
 word1.innerHTML=("back to the first");
+tr1.innerHTML=("");
+pron1.innerHTML=("");
 y=0;
 }
 	else{
