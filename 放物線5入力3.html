@@ -13,7 +13,7 @@
 <p>「グラフ描画」ボタンを押すとグラフが出てくる。ボールを投げたときの0.2秒おきの軌跡。初期値は時速100キロ、45度の角度で投げたとき。値を変えて描画ボタンを押すと、赤の点が変わる。青は初期値のまま。横軸は飛距離、縦軸は高さ、どちらも単位はメートル。</p>
 		<div><input type="text" id="velocity" value="100" >速度(時速キロ)</div>	
 		<div><input type="text" id="angle" value="45">角度(度)</div>
-		<button onclick="graph()">グラフ描画</button>
+		<button id="btn1" onclick="graph()">グラフ描画</button>
 	
       <div id="chartContainer" style="height:70%; width:70%">
         <!-- Show canvas here.-->
