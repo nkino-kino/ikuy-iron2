@@ -4,5 +4,31 @@
   /*background: #C0C0C0;*/
   background: #E7F5FC;
 
-  /*position: relative;*/
+
+}
+#btn1 {
+  width:20%;
+  font-size:200%;
+  color:#000000;
+  text-align:center;
+  display:block;
+  padding:10px 0 10px;
+  background:#FFFFFF;
+  border-radius: 5px;
+}
+#velocity {
+  width: 20%; /*親要素いっぱい広げる*/
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 40px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/;
+}
+#angle {
+  width: 20%; /*親要素いっぱい広げる*/
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 40px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/;
 }
