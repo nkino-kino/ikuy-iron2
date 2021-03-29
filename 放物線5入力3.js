@@ -45,7 +45,7 @@ var scatter_data = {
     label: "100km-45度",
     borderColor: window.chartColors.blue,
     backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
-    pointRadius: 5,
+    pointRadius: 10,
 
 	data: [
 		{x: X1val[0],y: Y1val[0]},
