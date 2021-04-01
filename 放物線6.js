@@ -54,6 +54,8 @@ for (T3=0; T3<11; T3=T3+0.2){
 	}}
 
 function plot (){
+	var time = document.getElementById('time');
+	time.innerHTML = (T3val[i]+" 秒");
 var scatter_data = {
  datasets:[
 {
