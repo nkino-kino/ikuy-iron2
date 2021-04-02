@@ -62,14 +62,14 @@ var scatter_data = {
     label: "100キロ-45度",
     borderColor: window.chartColors.red,
     backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
-    pointRadius: 10,
+    pointRadius: 20,
 	data: [{x: X1val[i],y: Y1val[i]},{x: X1val[i+1],y: Y1val[i+1]},{x: X1val[i+2],y: Y1val[i+2]}]
 	},
 {
     label: "100キロ-75度",
     borderColor: window.chartColors.blue,
     backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
-    pointRadius: 10,
+    pointRadius: 20,
 	data: [{x: X2val[i],y: Y2val[i]},{x: X2val[i+1],y: Y2val[i+1]},{x: X2val[i+2],y: Y2val[i+2]}]
 	
 },
@@ -77,7 +77,7 @@ var scatter_data = {
     label: "100キロ-90度",
     borderColor: window.chartColors.green,
     backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
-    pointRadius: 10,
+    pointRadius: 20,
 	data: [{x: X3val[i],y: Y3val[i]},{x: X3val[i+1],y: Y3val[i+1]},{x: X3val[i+2],y: Y3val[i+2]}]
 }
  ]}
