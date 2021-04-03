@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="createjs/css/base.css" />
   <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
   <script>
     // 読み込みが終わってから初期化
@@ -10,16 +10,16 @@
     function init() {
       // 初期化
       var stage = new createjs.Stage("myCanvas");
-		myCanvas.style.backgroundColor = "#F2F9FD"
+		myCanvas.style.backgroundColor = "#FFFDF3"
 		
 		var bmp1 = new createjs.Bitmap("kurage1.png");
 		bmp1.scaleX=0.2;
 		bmp1.scaleY=0.2;
 		stage.addChild(bmp1);
 		
-		var bmp2 = new createjs.Bitmap("kurage2.png");
-		bmp2.scaleX=0.2;
-		bmp2.scaleY=0.2;
+		var bmp2 = new createjs.Bitmap("バレーボールs.png");
+		bmp2.scaleX=0.1;
+		bmp2.scaleY=0.1;
 		stage.addChild(bmp2);
 
       var angleX = 0;
@@ -27,8 +27,8 @@
       var centerX = 200;
       var centerY = 200;
       var range = 120;
-      var speedX = 0.01;
-      var speedY = 0.015;
+      var speedX = 0.04;
+      var speedY = 0.06;
 
       // 時間経過
       createjs.Ticker.addEventListener("tick", handleTick);
