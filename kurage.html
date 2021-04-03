@@ -12,13 +12,13 @@
       var stage = new createjs.Stage("myCanvas");
 		
 		var bmp1 = new createjs.Bitmap("kurage1.png");
-		bmp1.scaleX=0.1;
-		bmp1.scaleY=0.1;
+		bmp1.scaleX=0.2;
+		bmp1.scaleY=0.2;
 		stage.addChild(bmp1);
 		
 		var bmp2 = new createjs.Bitmap("kurage2.png");
-		bmp2.scaleX=0.1;
-		bmp2.scaleY=0.1;
+		bmp2.scaleX=0.2;
+		bmp2.scaleY=0.2;
 		stage.addChild(bmp2);
 
       // ボールを作成
@@ -30,9 +30,9 @@
       var angleY = 0;
       var centerX = 300;
       var centerY = 300;
-      var range = 120;
-      var speedX = 0.04;
-      var speedY = 0.06;
+      var range = 100;
+      var speedX = 0.02;
+      var speedY = 0.03;
 
       // 時間経過
       createjs.Ticker.addEventListener("tick", handleTick);
