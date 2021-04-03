@@ -11,15 +11,15 @@
       // 初期化
       var stage = new createjs.Stage("myCanvas");
 	    myCanvas.style.backgroundColor = "#F2F9FD";
-		
+		var bsize = 0.2;
 		var bmp1 = new createjs.Bitmap("kurage1.png");
-		bmp1.scaleX=0.1;
-		bmp1.scaleY=0.1;
+		bmp1.scaleX=bsize;
+		bmp1.scaleY=bsize;
 		stage.addChild(bmp1);
 		
 		var bmp2 = new createjs.Bitmap("kurage2.png");
-		bmp2.scaleX=0.1;
-		bmp2.scaleY=0.1;
+		bmp2.scaleX=bsize;
+		bmp2.scaleY=bsize;
 		stage.addChild(bmp2);
 
       // ボールを作成
@@ -54,7 +54,7 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas" width="400" height="400"></canvas>
+  <canvas id="myCanvas" width="600" height="600"></canvas>
 	<br>
 	<br>
 	<a href="index.html">ホームへ戻る</a>　
