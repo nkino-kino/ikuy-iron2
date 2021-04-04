@@ -20,11 +20,6 @@
 		bmp2.scaleX=0.2;
 		bmp2.scaleY=0.2;
 		stage.addChild(bmp2);
-
-		var bmp3 = new createjs.Bitmap("バレーボールs.png");
-		bmp3.scaleX=0.1;
-		bmp3.scaleY=0.1;
-		stage.addChild(bmp3);
 		
       var angleX = 0;
       var angleY = 0;
@@ -41,8 +36,6 @@
         bmp1.y = centerY + Math.sin(angleY) * range;
 	bmp2.x = centerX + Math.cos(angleX) * range;
         bmp2.y = centerY + Math.cos(angleY) * range;
-	bmp3.x = centerX - Math.cos(2*angleX) * range;
-        bmp3.y = centerY - Math.cos(2*angleY) * range;
         angleX += speedX;
         angleY += speedY;
 	      
