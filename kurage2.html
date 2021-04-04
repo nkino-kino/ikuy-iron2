@@ -32,8 +32,8 @@
       var centerX = 200;
       var centerY = 200;
       var range = 120;
-      var speedX = 0.04;
-      var speedY = 0.06;
+      var speedX = 0.01;
+      var speedY = 0.015;
 
       // 時間経過
       createjs.Ticker.addEventListener("tick", handleTick);
@@ -42,8 +42,8 @@
         bmp1.y = centerY + Math.sin(angleY) * range;
 	bmp2.x = centerX + Math.cos(angleX) * range;
         bmp2.y = centerY + Math.cos(angleY) * range;
-	bmp3.x = centerX - Math.cos(angleX) * range;
-        bmp3.y = centerY - Math.cos(angleY) * range;
+	bmp3.x = centerX - Math.cos(2*angleX) * range;
+        bmp3.y = centerY - Math.cos(2*angleY) * range;
         angleX += speedX;
         angleY += speedY;
 
