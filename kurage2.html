@@ -17,18 +17,23 @@
 		bmp1.scaleY=0.2;
 		stage.addChild(bmp1);
 		
-		var bmp2 = new createjs.Bitmap("バレーボールs.png");
-		bmp2.scaleX=0.1;
-		bmp2.scaleY=0.1;
+		var bmp2 = new createjs.Bitmap("kurage2.png");
+		bmp2.scaleX=0.2;
+		bmp2.scaleY=0.2;
 		stage.addChild(bmp2);
 
+		var bmp3 = new createjs.Bitmap("バレーボールs.png");
+		bmp3.scaleX=0.1;
+		bmp3.scaleY=0.1;
+		stage.addChild(bmp3);
+		
       var angleX = 0;
       var angleY = 0;
       var centerX = 200;
       var centerY = 200;
       var range = 120;
-      var speedX = 0.01;
-      var speedY = 0.015;
+      var speedX = 0.04;
+      var speedY = 0.06;
 
       // 時間経過
       createjs.Ticker.addEventListener("tick", handleTick);
@@ -37,6 +42,8 @@
         bmp1.y = centerY + Math.sin(angleY) * range;
 		bmp2.x = centerX + Math.cos(angleX) * range;
         bmp2.y = centerY + Math.cos(angleY) * range;
+		bmp3.x = centerX - Math.cos(angleX) * range;
+        bmp3.y = centerY - Math.cos(angleY) * range;
         angleX += speedX;
         angleY += speedY;
 
@@ -49,8 +56,6 @@
   </script>
 </head>
 <body>
-  <canvas id="myCanvas" width="600" height="600"></canvas><br>
-	
-  <P>by NKinoshita</p>
+  <canvas id="myCanvas" width="600" height="600"></canvas>
 </body>
 </html>
