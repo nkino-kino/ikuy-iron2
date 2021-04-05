@@ -1,7 +1,7 @@
 $(function() {
   'use strict';
 
-  var thanks = false; // お礼メッセージを出す場合はtrue、出さない場合はfalse
+  var thanks = true; // お礼メッセージを出す場合はtrue、出さない場合はfalse
   var folderpath = '/';
   // iine_appフォルダが入っているパスを、ドメイン名以下から記入してください。
   // 下記の例に従ってください。
@@ -18,7 +18,7 @@ $(function() {
   var countNum = count.textContent;
   var pathname = location.href;
 
-  var ajaxPath = `${location.protocol}//${location.host}$/iine_app/_ajax.php`;
+  var ajaxPath = `${location.protocol}//${location.host}${folderpath}iine_app/_ajax.php`;
 
   var fadeout = function() {
     setTimeout(function(){
