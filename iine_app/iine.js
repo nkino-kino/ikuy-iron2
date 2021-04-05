@@ -18,7 +18,7 @@ $(function() {
   var countNum = count.textContent;
   var pathname = location.href;
 
-  var ajaxPath = `${location.protocol}//${location.host}${folderpath}iine_app/_ajax.php`;
+  var ajaxPath = `${location.protocol}//${location.host}$/iine_app/_ajax.php`;
 
   var fadeout = function() {
     setTimeout(function(){
