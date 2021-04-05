@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>要素を一つずつ表示</title>
+</head>
+
+<body>
+<script>
+let L1=["a","b","c","d","e"];
+var i = 0;
+function takeone(){
+if (i<L1.length){
+var hyouji = document.getElementById("hyouji");
+hyouji.innerHTML=(L1[i]);
+i++;
+}
+else if (i==L1.length){
+var hyouji = document.getElementById("hyouji");
+hyouji.innerHTML=("back to first");
+i=0;
+}
+else{
+i=0;
+hyouji.innerHTML=(L1[i]);
+}
+}
+</script>
+<input type="button" onclick="takeone()" value="START"/>
+<br>
+<div id = "hyouji"></div>
+</body>
+</html>
