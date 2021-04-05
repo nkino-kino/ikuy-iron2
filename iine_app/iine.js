@@ -2,7 +2,7 @@ $(function() {
   'use strict';
 
   var thanks = true; // お礼メッセージを出す場合はtrue、出さない場合はfalse
-  var folderpath = 'nkino-kino/ikuy-iron2/';
+  var folderpath = '/ikuy-iron2/';
   // iine_appフォルダが入っているパスを、ドメイン名以下から記入してください。
   // 下記の例に従ってください。
   // var folderpath = '/'; --- http://example.com/iine_app/の場合
