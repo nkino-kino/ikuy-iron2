@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TOEIC英単語</title>
+<link rel="stylesheet" type="text/css" href="TOEIC_wordsPC.css">
+	<script src="TOEIC_wordsPC.js"></script>
+	<script src="要素取得4PC.js"></script>
+	</head>
+
+<body>
+	<h1>TOEIC英単語</h1>
+	<div class="test1" id="test1"></div><br>
+	<div class="test2" id="test2"></div><br>
+
+	<p>メモと復習の機能付き。記憶する機能はない。</p>
+		<br>
+	<button class="btn1" onclick="getword()">WORD</button>
+		<br><br><br>
+		<div class="number" id="number"></div><br>
+		<div class="TOEIC" id="TOEIC"></div><br>
+
+		<button class="btn2" onclick="define()">DEFINITION</button><br>
+		<div id="definition"></div><br>
+		<br>
+	<script>
+		var rec=[];
+		var rec0=[];
+		var rec1=[];
+		var rec2=[];
+	function record(){
+		rec.push(x);
+		rec0.push(t1[x][0]);
+		rec1.push(t1[x][1]);
+		rec2.push(t1[x][2]);
+		//var reco = document.getElementById("reco");
+		//reco.innerHTML=(rec);
+		//var reco0 = document.getElementById("reco0");
+		//reco0.innerHTML=(rec0);
+		var reco1 = document.getElementById("reco1");
+		reco1.innerHTML=(rec1);
+		//var reco2 = document.getElementById("reco2");
+		//reco2.innerHTML=(rec2);
+		//var reco3 = document.getElementById("reco3");
+		//reco3.innerHTML=(rec3);
+	}
+	</script>
+	<button class="btn3" onclick="record()">メモ</button><br>
+	<br>
+	<div id="reco1"></div>
+	<br>
+	<button class="btn4" onclick="hyouji2()">復習</button>
+		<br>
+		<br>
+		<div id="number1"></div>
+		<div id="word1"></div>
+		<div id="definition1"></div>
+		<br>
+	<br>
+</body>
+</html>
+
