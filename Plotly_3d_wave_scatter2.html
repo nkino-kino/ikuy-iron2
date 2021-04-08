@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+function plot(){
+let m = 200;
+a=[], b=[]; c=[];
+for(i=0;i<=m;i++)
+  {
+    for(k=0;k<=m;k++)
+  {
+    a_ = i*3*Math.PI/m; 
+    a.push(a_);
+    
+    b_ = k*3*Math.PI/m; 
+    b.push(b_);
+    
+    c_ = Math.sin(a_)*Math.cos(b_); 
+    c.push(c_);
+  }
+}
+var data=[
+    {
+      opacity:1.0,
+      x: a,
+      y: b,
+      z: c,
+      type: 'scatter3d',
+      mode: 'markers',
+        marker: {
+        colorscale:'Viridis',
+        color: c,
+        size:0.3
+                }
+    }
+];
+var layout = {
+  scene:{
+	 aspectmode: "manual",
+   aspectratio: {
+     x: 1, y: 1, z: 0.5,
+    },
+   xaxis: {
+    nticks: 5,
+    range: [0, 10],
+  },
+   yaxis: {
+    nticks: 5,
+    range: [0, 10],
+  },
+   zaxis: {
+   nticks: 10,
+   range: [-1, 1],
+  }},
+};
+Plotly.newPlot('myDiv', data,layout);
+  }
+</script>
+<body onload="plot()">
+	<p>3Dのグラフを書いてみた。グラフにカーソルを当てて動かすと、グラフがグリグリ動きます。<br>
+		スマホでも動くかな？　式は、z=sin(x)*cos(y)</p>
+    <div id="myDiv"></div>
+	      <br>
+		<br>
+		<a href="Plotly_3d_anime.html">自動でグラフを動かしてみた　</a>
+		<br>
+		<br>
+		<a href="index.html">ホームへ戻る　</a>
+
+</body>
+</html>
