@@ -66,8 +66,8 @@ function createArray(csvData) {
 function back(){
 	var TOEICword = document.getElementById("TOEIC");
 		TOEICword.innerHTML=(word_num[k-1]+":  "+TOEIC[k-1]);
-		var definition = document.getElementById("definition");
-		definition.innerHTML=(definition[k-1]);
+		var definition2 = document.getElementById("definition");
+		definition2.innerHTML=(definition[k-1]);
 		k=k-1;
 }
 
