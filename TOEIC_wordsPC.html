@@ -10,8 +10,8 @@
 
 <body>
 	<h1>TOEIC英単語</h1>
-	<!--div class="test1" id="test1"></div><br>
-	<div class="test2" id="test2"></div-->
+	<div class="test1" id="test1"></div><br>
+	<div class="test2" id="test2"></div>
 
 	<p>英単語の英語によるdefinition</p>
 		<br>
@@ -20,40 +20,19 @@
 		<div class="number" id="number"></div><br>
 		<div class="TOEIC" id="TOEIC"></div><br>
 <p>=========================================</p>
-	<p> definition </p><br><br>
+	<p> definition </p><br>
 		<!--button class="btn2" onclick="define()">DEFINITION</button--><br>
-	<div id="definition"></div><font size="5"></font><br>
+	<div id="definition"></div><br>
 		<br>
-	<!--script>
-		var rec=[];
-		var rec0=[];
-		var rec1=[];
-		var rec2=[];
-	function record(){
-		rec.push(x);
-		rec0.push(t1[x][0]);
-		rec1.push(t1[x][1]);
-		rec2.push(t1[x][2]);
-		//var reco = document.getElementById("reco");
-		//reco.innerHTML=(rec);
-		//var reco0 = document.getElementById("reco0");
-		//reco0.innerHTML=(rec0);
-		var reco1 = document.getElementById("reco1");
-		reco1.innerHTML=(rec1);
-		//var reco2 = document.getElementById("reco2");
-		//reco2.innerHTML=(rec2);
-		//var reco3 = document.getElementById("reco3");
-		//reco3.innerHTML=(rec3);
-	}
-	</script-->
-	<button class="btn3" onclick="back()">戻る</button><br>
+
+	<button class="btn3" onclick="back()">一つ戻る</button><br>
+
 	<br>
-	<div id="reco1"></div>
-	<br>
-	<!--button class="btn4" onclick="hyouji2()">復習</button-->
-	<br>
-	<br>
-	<div><input type="text" class="wordnum" id="wordnum" value="番号入力" onclick="inputnum()"><font size="5">　途中からはじめたい時</font></div>
+	<p>============　　途中からはじめたい時　　============</p>　
+	<div><input type="text" class="wordnum" id="wordnum">
+	<button class="btn4" onclick="inputnum()">番号入力</button></div><br>
+	
+		
 		<br>
 		<br>
 		<div id="number1"></div>
