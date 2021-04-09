@@ -76,8 +76,8 @@ function inputnum(){
 	var text01 = document.getElementById('wordnum');
     k = parseInt(text01.value);
 		var TOEICword = document.getElementById("TOEIC");
-		TOEICword.innerHTML=(word_num[k]+":  "+TOEIC[k]);
+		TOEICword.innerHTML=(word_num[k-1]+":  "+TOEIC[k-1]);
 		var definition2 = document.getElementById("definition");
-		definition2.innerHTML=(definition[k]);
+		definition2.innerHTML=(definition[k-1]);
 }
 
