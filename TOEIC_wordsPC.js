@@ -41,7 +41,7 @@ function createArray(csvData) {
 	var test2 = document.getElementById("test2");
 		test2.innerHTML=TOEIC[10];
 */	
-	
+	}
 	if (k<TOEIC.length){
 		var TOEICword = document.getElementById("TOEIC");
 		TOEICword.innerHTML=(word_num[k]+":  "+TOEIC[k]);
@@ -58,15 +58,15 @@ function createArray(csvData) {
 		k=0;
 		TOEIC.innerHTML=(word_num[k]+":  "+TOEIC[k]);
 }
-}}
+}
 
 //戻るfunctionーーーーーーーーーーーーーーー
 
 function back(){
 	var TOEICword = document.getElementById("TOEIC");
-		TOEICword.innerHTML=(word_num[k-2]+":  "+TOEIC[k-2]);
+		TOEICword.innerHTML=(word_num[k-1]+":  "+TOEIC[k-1]);
 		var definition2 = document.getElementById("definition");
-		definition2.innerHTML=(definition[k-2]);
+		definition2.innerHTML=(definition[k-1]);
 		k=k-1;
 }
 
@@ -76,8 +76,8 @@ function inputnum(){
 	var text01 = document.getElementById('wordnum');
     k = parseInt(text01.value);
 		var TOEICword = document.getElementById("TOEIC");
-		TOEICword.innerHTML=(word_num[k-1]+":  "+TOEIC[k-1]);
+		TOEICword.innerHTML=(word_num[k]+":  "+TOEIC[k]);
 		var definition2 = document.getElementById("definition");
-		definition2.innerHTML=(definition[k-1]);
+		definition2.innerHTML=(definition[k]);
 }
 
