@@ -1,4 +1,3 @@
-//var x;
 var k = 0;
 var csvArray = [];
 var word_num=[];
@@ -29,15 +28,19 @@ function createArray(csvData) {
 		
 
 		
-//表示function-------------	
+//表示-------------	
 	
 	
 	for(var n=0; n<1253; n++){
 		word_num.push(csvArray[n][0]);
 		TOEIC.push(csvArray[n][1]);
 		definition.push(csvArray[n][2]);
-	}
-	
+/*	}
+	var test1=document.getElementById("test1");
+		test1.innerHTML=definition[20];
+	var test2 = document.getElementById("test2");
+		test2.innerHTML=TOEIC[10];
+*/	
 	
 	if (k<TOEIC.length){
 		var TOEICword = document.getElementById("TOEIC");
@@ -55,15 +58,15 @@ function createArray(csvData) {
 		k=0;
 		TOEIC.innerHTML=(word_num[k]+":  "+TOEIC[k]);
 }
-}
+}}
 
 //戻るfunctionーーーーーーーーーーーーーーー
 
 function back(){
 	var TOEICword = document.getElementById("TOEIC");
-		TOEICword.innerHTML=(word_num[k-1]+":  "+TOEIC[k-1]);
+		TOEICword.innerHTML=(word_num[k-2]+":  "+TOEIC[k-2]);
 		var definition2 = document.getElementById("definition");
-		definition2.innerHTML=(definition[k-1]);
+		definition2.innerHTML=(definition[k-2]);
 		k=k-1;
 }
 
