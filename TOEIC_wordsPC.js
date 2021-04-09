@@ -37,10 +37,6 @@ function createArray(csvData) {
 		TOEIC.push(csvArray[n][1]);
 		definition.push(csvArray[n][2]);
 	}
-	var test1=document.getElementById("test1");
-		test1.innerHTML=definition[20];
-	var test2 = document.getElementById("test2");
-		test2.innerHTML=TOEIC[10];
 	
 	
 	if (k<TOEIC.length){
