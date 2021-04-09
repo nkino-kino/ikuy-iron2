@@ -29,12 +29,12 @@ font-size:150%;
 }
 
 .btn3 {
- width:30%;
+ width:15%;
  height:30%;
  line-height:30px;
  text-align:center;
  display:inline-block;
- background:purple;
+ background:grey;
  color:#fff;
 font-size:150%;
  border-radius:5px;
@@ -64,4 +64,21 @@ p1{
     color: black;
     font-weight: bold; /*太字に*/
     /*text-shadow: black 3px 3px 0px;*/
+}
+#definition {
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+    padding: 0px;
+    font-size: 150%;
+    color: black;    /*font-weight: bold; 太字に*/
+    /*text-shadow: black 3px 3px 0px;*/
+}
+#wordnum {
+  width: 15%; /*親要素いっぱい広げる*/
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 20px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/;
 }

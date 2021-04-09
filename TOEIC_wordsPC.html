@@ -5,25 +5,26 @@
 <title>TOEIC英単語</title>
 <link rel="stylesheet" type="text/css" href="TOEIC_wordsPC.css">
 	<script src="TOEIC_wordsPC.js"></script>
-	<script src="要素取得4PC.js"></script>
+	<!--script src="要素取得4PC.js"></script-->
 	</head>
 
 <body>
 	<h1>TOEIC英単語</h1>
-	<div class="test1" id="test1"></div><br>
-	<div class="test2" id="test2"></div><br>
+	<!--div class="test1" id="test1"></div><br>
+	<div class="test2" id="test2"></div-->
 
-	<p>メモと復習の機能付き。記憶する機能はない。</p>
+	<p>英単語の英語によるdefinition</p>
 		<br>
-	<button class="btn1" onclick="getword()">WORD</button>
-		<br><br><br>
+	<button class="btn1" onclick="getword()">new word</button>
+	<p>word </p><br><br>
 		<div class="number" id="number"></div><br>
 		<div class="TOEIC" id="TOEIC"></div><br>
-
-		<button class="btn2" onclick="define()">DEFINITION</button><br>
-		<div id="definition"></div><br>
+<p>=========================================</p>
+	<p> definition </p><br><br>
+		<!--button class="btn2" onclick="define()">DEFINITION</button--><br>
+	<div id="definition"></div><font size="5"></font><br>
 		<br>
-	<script>
+	<!--script>
 		var rec=[];
 		var rec0=[];
 		var rec1=[];
@@ -44,12 +45,15 @@
 		//var reco3 = document.getElementById("reco3");
 		//reco3.innerHTML=(rec3);
 	}
-	</script>
-	<button class="btn3" onclick="record()">メモ</button><br>
+	</script-->
+	<button class="btn3" onclick="back()">戻る</button><br>
 	<br>
 	<div id="reco1"></div>
 	<br>
-	<button class="btn4" onclick="hyouji2()">復習</button>
+	<!--button class="btn4" onclick="hyouji2()">復習</button-->
+	<br>
+	<br>
+	<div><input type="text" class="wordnum" id="wordnum" value="番号入力" onclick="inputnum()"><font size="5">　途中からはじめたい時</font></div>
 		<br>
 		<br>
 		<div id="number1"></div>
