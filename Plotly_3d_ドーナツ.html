@@ -34,27 +34,14 @@ var data=[
                 }
     }
 ];
-
-	/*var layout = {
-  scene:{
-	 aspectmode: "manual",
-   aspectratio: {
-     x: 1, y: 1, z: 1,
-    },
-   xaxis: {
-    nticks: 5,
-    range: [-1, 1],
-  },
-   yaxis: {
-    nticks: 5,
-    range: [-1, 1],
-  },
-   zaxis: {
-   nticks: 5,
-   range: [-1, 1],
-  }},
-};*/
-Plotly.newPlot('myDiv', data);
+var layout = {
+width: 500,
+height: 500,
+paper_bgcolor: '#7f7f7f',
+plot_bgcolor: '#ABABAB',
+showlegend: false
+};            
+	Plotly.newPlot('myDiv', data, layout);
   }
   
 </script>
