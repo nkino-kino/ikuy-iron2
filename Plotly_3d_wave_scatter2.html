@@ -35,33 +35,30 @@ var data=[
     }
 ];
 var layout = {
-[width: 500,;
-height: 500,;]
-  scene:{
-	 aspectmode: "manual",
-   aspectratio: {
-     x: 1, y: 1, z: 0.5,
-    },
-   xaxis: {
-    nticks: 5,
-    range: [0, 10],
-  },
-   yaxis: {
-    nticks: 5,
-    range: [0, 10],
-  },
-   zaxis: {
-   nticks: 5,
-   range: [-1, 1],
-  }},
+	width: 500,;
+	height: 500,;
+	scene:{
+		aspectmode: "manual",
+		aspectratio: {x: 1, y: 1, z: 0.5,},
+   		xaxis: {
+   			nticks: 5,
+			range: [0, 10],
+		},
+   		yaxis: {
+    			nticks: 5,
+    			range: [0, 10],
+  		},
+   		zaxis: {
+   			nticks: 5,
+   			range: [-1, 1],
+  			}
+		},
 };
 Plotly.newPlot('myDiv', data,layout);
-  }
+}
 </script>
 <body onload="plot()">
-	<p>3Dのグラフを書いてみた。グラフにカーソル（指）を当てて動かすと、グラフが動きます。式は、z=sin(x)*cos(y)。<br>グラフが小さいので拡大してみてください。
-		
-	　</p>
+	<p>3Dのグラフ。グラフにカーソル（指）を当てて動かすと、グラフが動きます。式は、z=sin(x)*cos(y)。<br>グラフが小さいので拡大してみてください。</p>
     <div id="myDiv"></div>
 	      <br>
 		<br>
