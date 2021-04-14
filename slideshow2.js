@@ -50,7 +50,7 @@ var imLoad=false;
 var slideTimeId;
 var imMax=imFile.length;
 document.write("<div  align='center'>");
-document.write("<img width='70%' src="+imFile[0]+" name='pic'><br><br>");
+document.write("<img width='70%' height='90%' src="+imFile[0]+" name='pic'><br><br>");
 document.write("<form name='picForm'>");
 document.write("<input type='button' value='再生' onclick='slideLoad()' name='picBt'></form>");
 document.write("</div>");
