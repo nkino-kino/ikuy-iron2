@@ -2,7 +2,7 @@ var imFile=[
     "mother/1福寿草.jpg", 
     "mother/2カタクリ群生.jpg",
     "mother/3カタクリの花.jpg",
-    "mother / 4sumire.jpg",
+    "mother/4sumire.jpg",
     "mother/5himeryuukinka.jpg",
     "mother/6椿.jpg",
     "mother/7春の寄せ植え.jpg", 
