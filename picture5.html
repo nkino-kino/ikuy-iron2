@@ -14,7 +14,6 @@ td img {
     display:  inline-block; 
     box-shadow: 3px 5px 5px 5px #cd5c5c;
     }
-
 </style>
 
 </head>
@@ -43,7 +42,7 @@ td img {
     </td>
     <td>
         <legend>布袋敦盛草（ホテイアツモリソウ）</legend>
-        <a href="mother/41_hoteiatsumorisou.jpg" data-lightbox="group"><img src="mother/41_hoteiatsumorisou.jpg" width="140px"></a>
+        <a href="mother/41_hoteiatsumorisou.jpg" data-lightbox="group"><img src="mother/41_hoteiatsumorisou.jpg" width="180px"></a>
     </td>
     <td>
         <legend>どくだみ</legend>
@@ -53,7 +52,7 @@ td img {
 <tr>
     <td>
         <legend>秋の野芥子</legend>
-        <a href="mother/43_akinonogeshi.jpg" data-lightbox="group"><img src="mother/43_akinonogeshi.jpg" width="150px"></a>
+        <a href="mother/43_akinonogeshi.jpg" data-lightbox="group"><img src="mother/43_akinonogeshi.jpg" width="200px"></a>
     </td>
     <td>
         <legend>待宵草とどくだみと</legend>
@@ -67,15 +66,45 @@ td img {
 </table>
 <br>
 <br>
-<a href="picture6.html">page 6へ</a>
+<a class="a_button" href="picture6.html">page 6へ</a>
 <br>
 <br>
 <a href="picture4.html">page 4に戻る</a>
 <br>
 <br>
-	<a href="index.html">ホームに戻る</a>
+<a href="index.html">ホームに戻る</a>
     <br>
     <br>
-    <br>
+<!--input class="btn_pg" type="button" onclick="location.href= 'index.html'"　value="ホーム"-->
+<ul class="linklist">
+<li><button class="btn_pg" onclick="location.href= 'index.html'">Home</button></li>
+<li><button class="btn_pg" onclick="location.href= 'picture2.html'">2</button></li>
+<li><button class="btn_pg" onclick="location.href= 'picture3.html'">3</button></li>
+<li><button class="btn_pg" onclick="location.href= 'picture4.html'">4</button></li>
+<li><button class="btn_pg" onclick="location.href= 'picture5.html'">5</button></li>
+<li><button class="btn_pg" onclick="location.href= 'picture6.html'">6</button></li>
+<li><button class="btn_pg" onclick="location.href= 'picture7.html'">7</button></li>
+</ul>
+<style type="text/css">
+.btn_pg {
+  width:50px;
+  margin-left: 10px;
+  font-size: 15px;
+  color:#000000;
+  text-align:center;
+  display:block;
+  padding:10px 0 10px;
+  background:#ffffff;
+  border-radius: 3px;
+  border-color: #000000;
+  border-width: 1px;
+}
+.linklist{
+	display:flex;
+	justify-content: center;
+}
+</style>
+
+<br>
 </body>
 </html>
