@@ -36,16 +36,39 @@ var imFile=[
     "mother/34向日葵s.jpg", 
     "mother/35クレマチスs.jpg",
     "mother/36蓮s.jpg", 
-    
+    "mother /37_hamayuutotsukimisou.jpg",
+    "mother /38_asutoromeria.jpg",
+    "mother /39_huyoutomagarettonoHarmony.jpg",
+    "mother /40_keshinohana.jpg",
+    "mother /41_hoteiatsumorisou.jpg",
+    "mother /42_dokudami.jpg",
+    "mother /43_akinonogeshi.jpg",
+    "mother/44_yoimachigusatodokudamito.jpg",
+    "mother /45_tsuyukusatoakamanma.jpg",
+    "mother/46_hotarubukuro.jpg",
+    "mother/47_kazetoasobukosumosu.jpg",
+    "mother/48_kosumosu.jpg",
+    "mother/49_azamitohimejionnokatarai.jpg",
+    "mother/50_higanbana.jpg",
+    "mother/51_azami.jpg",
+    "mother/52_akinonobana.jpg",
+    "mother/53_koharubiyorinoniwa.jpg",
+    "mother/54_tawawanaminori2.jpg",
+    "mother/55_kukonohana.jpg",
+    "mother/56_sikuramen.jpg",
+    "mother/57_kurisumasurouzusaita.jpg",
+    "mother/58_akaikurisumasurouzu.jpg",
+    "mother/59_kurisumasurouzu.jpg",
+    "mother/60_katorea.jpg",
+    "mother/61_dendorobyuumu.jpg",
+    "mother/62_huyubotan.jpg",
+    "mother/63_yuri.jpg", 
+
     "mother/ヨセミテ2.jpg",
     "mother/孫と1.jpg", 
     "mother/孫と2.jpg",
     "mother/孫と(3).jpg"
 ];
-
-
-
-
 
 var slideInt=5000;
 var imNo=0;
