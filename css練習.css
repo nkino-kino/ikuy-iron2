@@ -82,5 +82,17 @@ p.sample3 span {
     margin: 0 60px 0 0;               /* 間隔指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
+td {align: center;
+    text-align: center; 
+	vertical-align: top;
+	width: 250px; 
+	height: 200px;
+    font-size: 12pt;
+	font-weight: normal;
+    border: 0px #2b2b2b solid;
+	}
+td img {
+    display:  inline-block; 
+    }
 
 div.counter img {box-shadow: none;}
