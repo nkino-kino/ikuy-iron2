@@ -58,10 +58,35 @@
     </ul>
 	<br>
 	<br>
-	<a href="picture3.html">次のページへ (page 3)　</a>
-	<br>
-	<br>
-	<a href="index.html">ホームへ戻る</a>　
+<ul class="linklist">
+    <li><button class="btn_pg" onclick="location.href= 'index.html'">Home</button></li>
+    <li><button class="btn_pg" style="background-color:#8582828e">2</button></li>
+    <li><button class="btn_pg" onclick="location.href= 'picture3.html'">3</button></li>
+    <li><button class="btn_pg" onclick="location.href= 'picture4.html'">4</button></li>
+    <li><button class="btn_pg" onclick="location.href= 'picture5.html'">5</button></li>
+    <li><button class="btn_pg" onclick="location.href= 'picture6.html'">6</button></li>
+    <li><button class="btn_pg" onclick="location.href= 'picture7.html'">7</button></li>
+</ul>
+<style type="text/css">
+    .btn_pg {
+        width: 50px;
+        margin-left: 10px;
+        font-size: 15px;
+        color: #000000;
+        text-align: center;
+        display: block;
+        padding: 10px 0 10px;
+        background: #ffffff;
+        border-radius: 3px;
+        border-color: #000000;
+        border-width: 1px;
+    }
+
+    .linklist {
+        display: flex;
+        justify-content: center;
+    }
+</style>
     <br>  
 </body>
 </html>
