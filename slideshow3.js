@@ -150,7 +150,7 @@ function slide_time() {
         document.getElementById("mypic").src = imFile[num];
 }
 function slide_run(){
-sliderun=setInterval(slide_time, 3000);
+sliderun=setInterval(slide_time, 5000);
 }
 function slide_stop(){
 		clearInterval(sliderun);

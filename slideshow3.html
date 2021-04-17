@@ -6,8 +6,10 @@
 </head>
 
 <body>
-<input type="button" class="btn_pg" value="再生" onclick="slide_run()">
-<input type="button" class="btn_pg" value="停止" onclick="slide_stop()">
+<!--input type="button" class="btn_pg" value="再生" onclick="slide_run()">
+<input type="button" class="btn_pg" value="停止" onclick="slide_stop()"-->
+<button class="btn_pg" onclick="slide_run()">再生</button>
+<button class="btn_pg" onclick="slide_stop()">停止</button>
 <button class="btn_pg" onclick="location.href= 'プログラミング練習部屋.html'">前のページへ</button>
 <button class="btn_pg" onclick="location.href= 'index.html'">ホームへ</button>
 <br>
@@ -15,4 +17,8 @@
 <div id="name">1福寿草</div>
 <img src="mother/1福寿草.jpg" id="mypic" class="slider" width="400px" />														
 </body>
+<style>
+  .btn_pg
+  {font-size: 15px;}
+</style>
 </html>
