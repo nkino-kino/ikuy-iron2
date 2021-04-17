@@ -1,4 +1,4 @@
-var imFile=[
+  var imFile=[
     "mother/1福寿草.jpg", 
     "mother/2カタクリ群生.jpg",
     "mother/3カタクリの花.jpg",
@@ -9,7 +9,6 @@ var imFile=[
     "mother/8河津桜.jpg", 
     "mother/9桜草.jpg", 
     "mother/10木蓮と山雀.jpg", 
-    "mother/10木蓮と山雀.jpg",  
     "mother/11パフィオペディルムs.jpg", 
     "mother/12紫蘭.jpg", 
     "mother/13春蘭s.jpg", 
@@ -20,7 +19,6 @@ var imFile=[
     "mother/18山法師を盛る.jpg",
     "mother/19林の中の水芭蕉群.jpg",
     "mother/20牡丹咲いた.jpg",
-    "mother/20牡丹咲いた.jpg",
     "mother/21牡丹を活ける.jpg",
     "mother/22くちなしの花s.jpg", 
     "mother/23カラーs.jpg",
@@ -28,7 +26,8 @@ var imFile=[
     "mother/25赤い薔薇s.jpg",
     "mother/26夏椿s.jpg", 
     "mother/27額紫陽花s.jpg",
-    "mother/28透かし百合を飾るs.jpg", 
+    "mother/28透かし百合を飾るs.jpg",
+    "mother/29_sukashiyurigunsei.jpg",
     "mother/30薊と透かし百合の庭s.jpg",
     "mother/31百合爛漫s.jpg", 
     "mother/32鬼百合s.jpg",
@@ -69,34 +68,90 @@ var imFile=[
     "mother/孫と2.jpg",
     "mother/孫と(3).jpg"
 ];
-
-var slideInt=5000;
-var imNo=0;
-var imLoad=false;
-var slideTimeId;
-var imMax=imFile.length;
-document.write("<div  align='center'>");
-document.write("<img width='70%' height='90%' src=" + imFile[0] + " name='pic'><br><br>");
-document.write("<form name='picForm'>");
-document.write("<input type='button' value='再生' onclick='slideLoad()' name='picBt'></form>");
-document.write("</div>");
-
-function slideLoad()
-{
-    if(imLoad==false)
-    {
-       imLoad=true;
-       document.picForm.picBt.value="停止";
-       slideTimeId=setInterval("slideRun()",slideInt);
-    }else{
-       imLoad=false;
-       document.picForm.picBt.value="再生";
-       clearInterval(slideTimeId);
-    }
+var name_list=[
+"1 福寿草", 
+"2 カタクリ群生",
+"3 カタクリの花",
+  "4_菫",
+  "5_姫立金花",
+  "6_椿",
+  "7 春の寄せ植え",
+  "8 河津桜",
+  "9 桜草",
+  "10 木蓮と山雀",
+  "11 パフィオペディルム",
+  "12 紫蘭",
+  "13 春蘭",
+  "14 野の蘭熊谷草",
+  "15 春の庭先",
+  "16 花水木",
+  "17 アマリリス咲く庭",
+  "18 山法師を盛る",
+  "19 林の中の水芭蕉群",
+  "20 牡丹咲いた",
+  "21 牡丹を活ける",
+  "22 くちなしの花",
+  "23 カラー",
+  "24 花ある窓辺",
+  "25 赤い薔薇",
+  "26 夏椿",
+  "27 額紫陽花",
+  "28 透かし百合を飾る",
+  "29 透かし百合群生",
+  "30 薊と透かし百合の庭",
+  "31 百合爛漫",
+  "32 鬼百合",
+  "33 野辺の百合",
+  "34 向日葵",
+  "35 クレマチス",
+  "36 蓮",
+  "37_浜木綿と月見草",
+  "38_アストロメリア",
+  "39_芙蓉とマーガッレットのハーモニー",
+  "40_芥子の花",
+  "41_布袋敦盛草（あつもりそう） ",
+  "42_どくだみ",
+  "43_秋の野芥子 ",
+  "44_宵待草とどくだみと",
+  "45_露草と赤まんま",
+  "46_蛍袋",
+  "47_風と遊ぶコスモス",
+  "48_コスモス",
+  "49_薊と姫女苑の語らい",
+  "50_彼岸花",
+  "51_薊（あざみ）",
+  "52_秋の野花",
+  "53_小春日和の庭",
+  "54_たわわな実り",
+  "55_くこの花",
+  "56_シクラメン",
+  "57_クリスマスローズ咲いた",
+  "58_赤いクリスマスローズ",
+  "59_クリスマスローズ",
+  "60_カトレア",
+  "61_デンドロビウム",
+  "62_冬牡丹",
+  "63_ヤマユリ",
+  "ヨセミテ",
+  "孫と1 ",
+  "孫と2 ",
+  "孫と 3 "
+]
+let num = -1;
+var sliderun;
+function slide_time() {
+   if (num === imFile.length-1) {
+          num = 0;
+        } 
+	else {
+          num++;
+        }
+        document.getElementById("name").innerHTML = name_list[num];
+        document.getElementById("mypic").src = imFile[num];
 }
-function slideRun()
-{
-    imNo++;
-    if(imNo>=imMax){imNo=0;}
-    document.pic.src=imFile[imNo];
+function slide_run(){
+sliderun=setInterval(slide_time, 3000);
 }
+function slide_stop(){
+		clearInterval(sliderun);
+	}
