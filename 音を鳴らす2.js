@@ -10,8 +10,9 @@ function sound()
 	{
 		document.getElementById( id ).currentTime = 0;
 	}
-    audio.load()
+    
 	// [ID:sound-file]の音声ファイルを再生[play()]する
     document.getElementById(id).muted = false;
+    audio.load()
     document.getElementById( id ).play() ;
 }
