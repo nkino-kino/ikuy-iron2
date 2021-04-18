@@ -3,6 +3,19 @@
 body {
 font-family: "游ゴシック","メイリオ",sans-serif ;
 }
+input {
+ width:20%;
+ height:20%;
+padding:  10px;
+ line-height: 30px;
+ text-align:center;
+ display:inline-block;
+ background:#C7C7C7;
+ color:#101010;
+font-size:120%;
+ border-radius:5px;
+ text-decoration:none;
+}
 .btn1 {
  width:30%;
  height:40%;
@@ -52,7 +65,7 @@ font-size:200%;
  text-decoration:none;
 }
 .count {
-font-size:300%;
+font-size:400%;
 }
 .count1 {
 font-size:150%;
