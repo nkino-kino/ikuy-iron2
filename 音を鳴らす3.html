@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="音を鳴らす.css" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+		<!--meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+
+		<title>音が鳴るボタン</title>
+	</head>
+<body>
+<h1 style="text-align:center;color:#d36015;">表示の時間間隔で音が鳴る</h1>
+<p>終わらせ方がわからんので、終了は「リロード」で。</p>
+<p>ストレッチなどの運動にと思って作ったものの、<br>
+iPhoneで音が出ないのは修正できていない。</p>
+
+<br><br>
+<input type="button" class="btn1" onclick="startfnc10()" value="5秒間隔"/>
+	<br>
+	<div id="count10"></div>
+
+
+<!--audio id="sound-file" preload="auto">
+	<source src="Countdown05-1.mp3" type="audio/mp3">
+	<source src="paddbeep.wav" type="audio/wav">
+</audio-->
+
+<script src="音を鳴らす.js"></script>
+<script>
+	function startfnc10(){
+  	setInterval("sound()",5000);
+	var count10=document.getElementById("count10")
+	count10.innerHTML = ("カウント中");
+	}
+	</script>
+	
+<!--script>
+    function sound() {
+            // 対象となるID名
+            //var id = 'sound-file' ;
+            var id = new Howl({ src: ['Countdown05-1.mp3'] })
+            //sound.play();
+
+            // 初回以外だったら音声ファイルを巻き戻す
+          //  if (typeof (document.getElementById(id).currentTime) != 'undefined') {
+           //     document.getElementById(id).currentTime = 0; }
+
+            // [ID:sound-file]の音声ファイルを再生[play()]する
+            //document.getElementById(id).muted = false;
+            //audio.load()
+            document.getElementById(id).sound.play();
+    }/*    
+    function sound(){
+    var id = new Howl({ src: ['Countdown05-1.mp3'] })
+        audio.play()
+    var btn1 = document.getElementById('btn1');
+
+    // Audio要素を取得して再生
+    var audio = document.getElementById('audio');
+    //btn1.addEventListener('click', function () {
+    //    audio.play();}, false);
+
+    // オンザフライで生成したAudio要素も再生可能
+    //var audio = new Howl({ src: ['Countdown05-1.mp3'] });
+    //var audio = new Audio('Countdown05-1.mp3');
+
+        document.getElementById(id).muted = false;
+        audio.load()
+        document.getElementById(id).play();
+    }*/
+</script-->
+</body>
+</html>

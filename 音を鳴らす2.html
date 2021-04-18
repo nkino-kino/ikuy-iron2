@@ -11,28 +11,28 @@
 	</head>
 <body>
 <h1 style="text-align:center;color:#d36015;">表示の時間間隔で音が鳴る</h1>
-<p>終わらせ方がわからんので、終了は「リロード」か「ホームに戻る」で。</p>
+<p>終わらせ方がわからんので、終了は「リロード」で。</p>
 <p>ストレッチなどの運動にと思って作ったものの、<br>
 iPhoneで音が出ないのは修正できていない。</p>
 
 <!--hr style="margin: 3em 0 ;"-->
 <br><br>
-<input type="button" class="btn1" onclick="startfnc10()" value="10秒間隔"/>
+<input type="button" class="btn1" onclick="startfnc10()" value="5秒間隔"/>
 	<br>
 	<div id="count10"></div>
-	<br>
-	<input type="button" class="btn2" onclick="startfnc20()" value="20秒"/>
-	<br>
-	<div id="count20"></div>
-	<br>
-	<input type="button" class="btn3" onclick="startfnc30()" value="30秒"/>
-	<br>
-	<div id="count30"></div>
-	<br>
-	<input type="button" class="btn4" onclick="startfnc60()" value="1分"/>
-	<br>
-	<div id="count60"></div>
-	<br>
+<br>
+<input type="button" class="btn2" onclick="startfnc20()" value="20秒" />
+<br>
+<div id="count20"></div>
+<br>
+<input type="button" class="btn3" onclick="startfnc30()" value="30秒" />
+<br>
+<div id="count30"></div>
+<br>
+<input type="button" class="btn4" onclick="startfnc60()" value="1分" />
+<br>
+<div id="count60"></div>
+<br>
  <br>
 
 <audio id="sound-file" preload="auto">
@@ -46,7 +46,7 @@ iPhoneで音が出ないのは修正できていない。</p>
 <script src="音を鳴らす.js"></script>
 <script>
 	function startfnc10(){
-  	setInterval("sound()",10000);
+  	setInterval("sound()",5000);
 	var count10=document.getElementById("count10")
 	count10.innerHTML = ("カウント中");
 	}
