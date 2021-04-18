@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="音を鳴らす.css" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+
+
+		<title>インターバルタイマー</title>
+	</head>
+<body>
+<h1 style="text-align:left;color:#d36015;">表示の時間間隔で音が鳴る</h1>
+
+<p>ストレッチなどの運動に使えるよ。<br>
+iPhoneで音が出ないのは修正できていない。</p>
+<br>
+<input type="button" class="btn1" onclick="count_run(10)" value="10秒間隔"/>
+	<br><br>
+	<input type="button" class="btn2" onclick="count_run(20)" value="20秒間隔" />
+	<br><br>
+	<input type="button" class="btn3" onclick="count_run(30)" value="30秒間隔" />
+	<br><br>
+	<input type="button" class="btn4" onclick="count_run(60)" value="60秒間隔" />
+	<br><br>
+    <div class="count1" id="hyouji"></div>
+	<div class="count" id="count10"></div>
+<br>
+<input type="button" class="btn5" onclick="count_stop()" value="停止" />
+<br><br>
+<input type="button" class="btn6" onclick="location.href= '音を鳴らす5.html'" value="リセット" />
+<br><br>
+
+<audio id="sound-file" preload="auto">
+	<source src="Countdown05-1.mp3" type="audio/mp3">
+	<source src="paddbeep.wav" type="audio/wav">
+</audio>
+
+<script>
+    var interval;
+	let num = -1;
+	var count10;
+    var countrun;
+    function count_run(a) {
+            interval = a;
+            document.getElementById("hyouji").innerHTML = a + " 秒カウント";
+            countrun = setInterval(count_time, 1000);
+        }
+	function count_time() {
+			if (num === interval - 1) {
+				num = 0;
+			}
+			else {
+				num++;
+			}
+			document.getElementById("count10").innerHTML = (num+1) + " 秒";
+			if (num === interval-3){
+				var id = 'sound-file';
+				if (typeof (document.getElementById(id).currentTime) != 'undefined') {
+					document.getElementById(id).currentTime = 0;
+				}
+				document.getElementById(id).play();				
+			}
+		}
+    function count_stop(){
+        clearInterval(countrun);
+    }
+	</script>
+	<br>
+	<br>
+    <a href="プログラミング練習部屋.html">前のページへ戻る</a>
+</body>
+</html>

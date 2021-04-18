@@ -15,9 +15,9 @@
 iPhoneで音が出ないのは修正できていない。</p>
 
 <br><br>
-<input type="button" class="btn1" onclick="count_run()" value="5秒間隔"/>
+<input type="button" class="btn1" onclick="count_run()" value="10秒間隔"/>
 	<br>
-	<div id="count10"></div>
+	<div class="count" id="count10"></div>
 
  <br>
 
@@ -27,10 +27,11 @@ iPhoneで音が出ないのは修正できていない。</p>
 </audio>
 
 <script>
+	let interval = 10;
 	let num = -1;
 	var count10;
 	function count_time() {
-			if (num === 5 - 1) {
+			if (num === interval - 1) {
 				num = 0;
 			}
 			else {
@@ -38,7 +39,7 @@ iPhoneで音が出ないのは修正できていない。</p>
 			}
 			document.getElementById("count10").innerHTML = (num+1) + " 秒";
 			//document.getElementById("mypic").src = imFile[num];
-			if (num === 2){
+			if (num === interval-3){
 				var id = 'sound-file';
 				// 初回以外だったら音声ファイルを巻き戻す
 				if (typeof (document.getElementById(id).currentTime) != 'undefined') {

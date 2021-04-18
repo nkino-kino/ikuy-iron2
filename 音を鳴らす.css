@@ -5,49 +5,55 @@ font-family: "游ゴシック","メイリオ",sans-serif ;
 }
 .btn1 {
  width:30%;
- height:30%;
+ height:40%;
  line-height:30px;
  text-align:center;
  display:inline-block;
  background:blue;
  color:#fff;
-font-size:150%;
+font-size:200%;
  border-radius:5px;
  text-decoration:none;
 }
 .btn2 {
  width:30%;
- height:30%;
+ height:40%;
  line-height:30px;
  text-align:center;
  display:inline-block;
  background:red;
-	font-size:150%;
+	font-size:200%;
  color:#fff;
  border-radius:5px;
  text-decoration:none;
 }
 .btn3 {
  width:30%;
- height:30%;
+ height:40%;
  line-height:30px;
  text-align:center;
  display:inline-block;
  background:green;
-	font-size:150%;
+ font-size:200%;
  color:#fff;
  border-radius:5px;
  text-decoration:none;
 }
 .btn4 {
  width:30%;
- height:30%;
+ height:40%;
  line-height:30px;
  text-align:center;
  display:inline-block;
  background:purple;
-	font-size:150%;
+	font-size:200%;
  color:#fff;
  border-radius:5px;
  text-decoration:none;
+}
+.count {
+font-size:300%;
+}
+.count1 {
+font-size:150%;
 }
