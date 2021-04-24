@@ -53,10 +53,10 @@ p.sample2 span {
     font-size: 50%;
 }
 p.sample3 {
-    color:rgb(150, 49, 116); 
+    color:rgb(32, 79, 42); 
     font-size: 150%; 
-    background-color:#ffeaed;
-    border:1px solid #af5050;
+    background-color:#cfffd9;
+    border:1px solid #048334;
 }
 p.sample3 span {
     text-align: right;
