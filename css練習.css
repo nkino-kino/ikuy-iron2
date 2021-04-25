@@ -108,7 +108,7 @@ div.counter img {box-shadow: none;}
 .btn_pg {
         width: 70px;
         margin-left: 10px;
-        font-size: 18px;
+        font-size: 24px;
         color: #000000;
         text-align: center;
         display: block;
@@ -117,6 +117,18 @@ div.counter img {box-shadow: none;}
         border-radius: 3px;
         border-color: #000000;
         border-width: 1px;
+    }
+    .btn_pg.bird{
+        background: #e4e0f8;
+        font-size: 24px;
+    }
+    .btn_pg.picture {
+        background: #fceaea;
+        font-size: 24px;
+    }
+    .btn_pg.album {
+        background: #ecfcea;
+        font-size: 24px;
     }
     .linklist {
     display: flex;
