@@ -86,7 +86,7 @@ p.sample3 span {
     }
 .album > li {
     display:  inline-block;     /* インラインブロック要素にする */
-    margin: 0 60px 0 0;               /* 間隔指定 */
+    margin: 0 40px 0 0;               /* 間隔指定 */
     vertical-align: top;    /* 要素を上下中央で揃える */
 }
 td {align: center;
