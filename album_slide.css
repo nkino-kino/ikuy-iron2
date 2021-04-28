@@ -1,0 +1,33 @@
+@charset "UTF-8";
+body {
+font-family: "游ゴシック","メイリオ",sans-serif ;
+}
+#main {
+	poition: relative;
+  width: 30%;
+  height: auto;
+}
+
+#shashin {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+}
+.displayItems {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+#setsumei {
+	text-align: center;
+}
+
+.left {
+	margin-right: auto;
+
+}
+.right {
+	margin-left: auto;
+
+}
+
