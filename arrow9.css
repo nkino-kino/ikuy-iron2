@@ -1,0 +1,30 @@
+@charset "UTF-8";
+#main {
+	poition: relative;
+  width: 500px;
+  height: auto;
+}
+
+#shashin {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+}
+.displayItems {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+#setsumei {
+	text-align: center;
+}
+
+.left {
+	margin-right: auto;
+
+}
+.right {
+	margin-left: auto;
+
+}
+

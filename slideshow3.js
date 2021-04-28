@@ -66,7 +66,13 @@
     "mother/ヨセミテ2.jpg",
     "mother/孫と1.jpg", 
     "mother/孫と2.jpg",
-    "mother/孫と(3).jpg"
+    "mother/孫と(3).jpg",
+    "images/tomo_titi_haha.jpg",
+    "images/tomo_hahato.jpg",
+    "images/hahato.jpg",
+    "images/wakakihaha.jpg",
+    "images/wakakihaha2.jpg",
+
 ];
 var name_list=[
 "1 福寿草", 
@@ -133,9 +139,14 @@ var name_list=[
   "62_冬牡丹",
   "63_ヤマユリ",
   "ヨセミテ",
-  "孫と1 ",
-  "孫と2 ",
-  "孫と 3 "
+  "孫と 1 ",
+  "孫と 2 ",
+  "孫と 3 ",
+  "孫と 4",
+  "孫と 5",
+  "孫と 6",
+  "子と 1",
+  "子と 2",
 ]
 let num = -1;
 var sliderun;
