@@ -1,4 +1,7 @@
 @charset "UTF-8";
+body {
+font-family: "游ゴシック","メイリオ",sans-serif ;
+}
 #main {
 	poition: relative;
   width: 70%;
