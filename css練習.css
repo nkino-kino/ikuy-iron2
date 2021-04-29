@@ -74,7 +74,7 @@ p.sample3 span {
 }
 .flower img {
     box-shadow: 3px 5px 5px 5px #cd5c5c;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     }
 .flower > li {
     display:  inline-block;     /* インラインブロック要素にする */
@@ -106,13 +106,13 @@ div.counter img {box-shadow: none;}
 
 
 .btn_pg {
-        width: 70px;
-        margin-left: 10px;
+        width: 60px;
+        margin-left: 15px;
         font-size: 24px;
         color: #000000;
         text-align: center;
         display: block;
-        padding: 10px 0 10px;
+        padding: 5px 0 5px;
         background: #ffffff;
         border-radius: 3px;
         border-color: #000000;
