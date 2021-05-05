@@ -4,7 +4,7 @@ body {
 font-family: "游ゴシック","メイリオ",sans-serif ;
 }
 .btn1 {
- width:25%;
+ width:30%;
  height:30%;
  line-height:30px;
  text-align:center;
@@ -16,7 +16,7 @@ font-size:200%;
  text-decoration:none;
 }
 .btn2 {
- width:25%;
+ width:30%;
  height:30%;
  line-height:30px;
  text-align:center;
@@ -29,7 +29,7 @@ font-size:200%;
 }
 
 .btn3 {
- width:25%;
+ width:30%;
  height:30%;
  line-height:30px;
  text-align:center;
