@@ -153,12 +153,14 @@ var min = 0;
 	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
 	var x = parseInt(a);
 function mondai(){
+	for (var k=0; k<47; k++){
 	x = parseInt(Math.floor(Math.random() * (max + 1 - min)) + min);
 	if (num.indexOf(x)==-1){
-	document.getElementById("question").src = map[x];
+		document.getElementById("question").src = map[x];
+		continue;
 	}
 
-
+	}
 }
 function nihon(){
 	//document.getElementById("hint").src = japan[x];
