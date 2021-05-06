@@ -52,6 +52,18 @@ font-size:200%;
  border-radius:10px;
  text-decoration:none;
 }
+.btn5 {
+ width:30%;
+ height:30%;
+ line-height:30px;
+ text-align:center;
+ display:inline-block;
+ background:#F48E30;
+ font-size:200%;
+ color:#fff;
+ border-radius:10px;
+ text-decoration:none;
+}
 p1{
 	font-size: 80%;
 }

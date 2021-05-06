@@ -157,7 +157,7 @@ function mondai(){
 	x = parseInt(Math.floor(Math.random() * (max + 1 - min)) + min);
 	if (num.indexOf(x)==-1){
 		document.getElementById("question").src = map[x];
-		continue;
+		break;
 	}
 
 	}
@@ -173,6 +173,7 @@ function kaitou (){
 function reset (){
 	num.push(x);
 	document.getElementById("suuji").innerHTML="問題数："+num.length;
+	
 	document.getElementById("suuji2").innerHTML="県番号（チェック用メモ）"+"<br>"+num;
 	document.getElementById("question").src = "";
 	document.getElementById("hint").src = "";

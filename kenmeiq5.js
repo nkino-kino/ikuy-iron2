@@ -149,23 +149,22 @@ var answer = new Array(
 
 var num = [];
 
-	var x;
+	var a = Math.floor(Math.random() * (map.length));
+	var x = parseInt(a);
 function mondai(){
 	x = parseInt(Math.floor(Math.random() * (map.length)));
-	if (num.indexOf(x)==-1){
 	document.getElementById("question").src = map[x];
-	}
-	
+	map=map.filter(item=>item!=map[x]);
 
 
 }
 function nihon(){
-	//document.getElementById("hint").src = japan[x];
 	document.getElementById("hint").src = japan[x];
-	//document.getElementById("hint").innerHTML = japan[x];
+	japan=japan.filter(item=>item!=japan[x]);
 	}
 function kaitou (){
 	document.getElementById("kotae").innerHTML=answer[x];
+	answer=answer.filter(item=>item!=answer[x]);
 }
 function reset (){
 	num.push(x);

@@ -1,3 +1,4 @@
+
 // JavaScript Document
 var map = [
 	"prefectures/0.png",
@@ -146,20 +147,22 @@ var answer = new Array(
 	'鹿児島',
   '沖縄'
 );
+var x ;
+
 var num1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46]
 var num2 = [];
 
-var min = 0;
-	var max = num1.length-1;
-	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
-	var x = num1[a];
+
+	
+
 function mondai(){
-	x = parseInt(Math.floor(Math.random() * (max + 1 - min)) + min);
-	if (num2.indexOf(x)==-1){
+	x = parseInt(Math.floor(Math.random() * (num1.length)));
 	document.getElementById("question").src = map[x];
+	num2.push(num1[x]);
+	num1=num1.filter(item=>item!=num1[x]);
 	}
 
-}
+
 function nihon(){
 	//document.getElementById("hint").src = japan[x];
 	document.getElementById("hint").src = japan[x];
@@ -169,11 +172,9 @@ function kaitou (){
 	document.getElementById("kotae").innerHTML=answer[x];
 }
 function reset (){
-	num2.push(x);
-	num1.filter(n => n !== a);
-	
 	document.getElementById("suuji").innerHTML="問題数："+num2.length;
-	document.getElementById("suuji2").innerHTML="県番号（チェック用メモ）"+"<br>"+num1;
+	document.getElementById("suuji2").innerHTML="県番号（チェック用2）"+num1;
+	document.getElementById("suuji3").innerHTML="県番号（チェック用1）"+num2;
 	document.getElementById("question").src = "";
 	document.getElementById("hint").src = "";
 	document.getElementById("kotae").innerHTML="";

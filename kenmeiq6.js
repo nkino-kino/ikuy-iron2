@@ -148,27 +148,31 @@ var answer = new Array(
 );
 
 var num = [];
+var x;
+var a;
 
-	var x;
-function mondai(){
-	x = parseInt(Math.floor(Math.random() * (map.length)));
-	if (num.indexOf(x)==-1){
-	document.getElementById("question").src = map[x];
+	
+	function mondai(){
+	for (var i=0; i<map.length+1; i++){
+		x = parseInt(Math.floor(Math.random() * (map.length)));
+
+	if (num.indexOf(x)!=-1){continue}
+		else {
+			a=x}}
+
+	document.getElementById("question").src = map[a];
 	}
 	
-
-
-}
 function nihon(){
 	//document.getElementById("hint").src = japan[x];
-	document.getElementById("hint").src = japan[x];
+	document.getElementById("hint").src = japan[a];
 	//document.getElementById("hint").innerHTML = japan[x];
 	}
 function kaitou (){
-	document.getElementById("kotae").innerHTML=answer[x];
+	document.getElementById("kotae").innerHTML=answer[a];
 }
 function reset (){
-	num.push(x);
+	num.push(a);
 	document.getElementById("suuji").innerHTML="問題数："+num.length;
 	document.getElementById("suuji2").innerHTML="県番号（チェック用メモ）"+"<br>"+num;
 	document.getElementById("question").src = "";

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>配列並び替え</title>
+</head>
+
+<body>
+	<div id="L0"></div>
+	<div id="L1"></div>
+	<div id="L2"></div>
+	<div id="L3"></div>
+	
+	<script>
+	var list1 = ["a","b","c","d","e"];
+var list2 = [];
+var list3 = [];
+var min = 0;
+	var max = list1.length;
+	
+  document.getElementById("L0").innerHTML=list1;
+ 
+for (var i=0; i<max; i++){
+	var x = Math.floor(Math.random() * (list1.length)) ;
+  list2.push(x);
+	list3.push(list1[x]);
+	list1.splice(x,1)}
+  
+document.getElementById("L1").innerHTML="1: "+list1;
+document.getElementById("L2").innerHTML="2: "+list2;
+document.getElementById("L3").innerHTML="3: "+list3;
+
+	</script>
+</body>
+</html>
