@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ビュフォンの針2</title>
+<h1>ビュフォンの針のシミュレーション2</h1>
+</head>
+	<body>
+	<p>ここでは1cm間隔の線が引いてある平面に長さ1cmの針を投げて、<br>
+		交わったかどうかを検定する</p>
+	<p>投げた回数、そのうち線と交わった回数、（2xテスト回数）/交わった回数（円周率の近似）</p>
+	<p>100回投げた時</p>
+	<div id="hyaku" style="font-size: 20pt"></div>
+	<br>
+	<p>1000回投げた時</p>
+	<div id="sen" style="font-size: 20pt"></div>
+	<br>
+	<p>10000回投げた時</p>
+	<div id="man" style="font-size: 20pt"></div>
+	<br>
+	<input type="button" class="btn5" onclick="location.href= 'Buffon’s needle problem2.html'" value="再試行" />
+	<br>
+	<p>確かに一万回投げれば3.14に近い。因みに3.14になるときの確率は0.637です。</p>
+</body>
+<script>
+var i1=0;
+var test1=100
+for (var k1=0; k1<test1; k1++){
+var theta1 = Math.random()*2*Math.PI;
+var y01 = 1+ 5*Math.random();
+var y11 = y01 + Math.cos(theta1);
+var y21 = Math.floor(y01);
+var y31 = Math.floor(y11);
+if ((y21-y31) != 0){i1++}
+document.getElementById("hyaku").innerHTML=test1+" : "+i1+" : "+(2*test1)/i1;
+}
+var i2=0;
+var test2=1000;
+for (var k2=0; k2<test2; k2++){
+var theta2 = Math.random()*2*Math.PI;
+var y02 = 1+ 5*Math.random();
+var y12 = y02 + Math.cos(theta2);
+var y22 = Math.floor(y02);
+var y32 = Math.floor(y12);
+if ((y22-y32) != 0){i2++}
+document.getElementById("sen").innerHTML=test2+" : "+i2+" : "+(2*test2)/i2;
+}
+var i3=0;
+var test3=10000;
+for (var k3=0; k3<test3; k3++){
+var theta3 = Math.random()*2*Math.PI;
+var y03 = 1+ 5*Math.random();
+var y13 = y03 + Math.cos(theta3);
+var y23 = Math.floor(y03);
+var y33 = Math.floor(y13);
+if ((y23-y33) != 0){i3++}
+document.getElementById("man").innerHTML=test3+" : "+i3+" : "+(2*test3)/i3;
+}
+</script>
+
+</html>
