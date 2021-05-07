@@ -174,7 +174,7 @@ function kaitou (){
 function reset (){
 	num.push(a);
 	document.getElementById("suuji").innerHTML="問題数："+num.length;
-	document.getElementById("suuji2").innerHTML="県番号（チェック用メモ）"+"<br>"+num;
+	document.getElementById("suuji2").innerHTML="県番号（プログラムチェック用メモ）"+"<br>"+num;
 	document.getElementById("question").src = "";
 	document.getElementById("hint").src = "";
 	document.getElementById("kotae").innerHTML="";
