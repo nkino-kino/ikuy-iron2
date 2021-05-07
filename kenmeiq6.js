@@ -159,7 +159,7 @@ var a;
 	if (num.indexOf(x)!=-1){continue}
 		else {
 			a=x}}
-
+		num.push(a);
 	document.getElementById("question").src = map[a];
 	}
 	
@@ -172,7 +172,7 @@ function kaitou (){
 	document.getElementById("kotae").innerHTML=answer[a];
 }
 function reset (){
-	num.push(a);
+	
 	document.getElementById("suuji").innerHTML="問題数："+num.length;
 	document.getElementById("suuji2").innerHTML="県番号（プログラムチェック用メモ）"+"<br>"+num;
 	document.getElementById("question").src = "";
