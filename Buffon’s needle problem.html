@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ビュフォンの針</title>
+</head>
+	<body>
+	<p>100回投げた時に線と交わった回数</p>
+	<div id="kaisuu" style="font-size: 20pt"></div>
+	
+	<p>（2xテスト回数）/交わった回数＝円周率の近似</p>
+	<div id="pai" style="font-size: 20pt"></div>
+</body>
+<script>
+var i=0;
+var test=100
+for (var k=0; k<test; k++){
+
+var theta = Math.random()*2*Math.PI;
+var y0 = 1+ 5*Math.random();
+var y1 = y0 + Math.cos(theta);
+var y2 = Math.floor(y0);
+var y3 = Math.floor(y1);
+if ((y2-y3) != 0){i++}
+
+document.getElementById("kaisuu").innerHTML=i;
+document.getElementById("pai").innerHTML=(2*test)/i;
+}
+</script>
+
+</html>
