@@ -175,8 +175,8 @@ function reset (){
 	
 	document.getElementById("suuji").innerHTML="問題数："+num.length;
 	document.getElementById("suuji2").innerHTML="県番号（プログラムチェック用メモ）"+"<br>"+num;
-	document.getElementById("question").src = "";
-	document.getElementById("hint").src = "";
+	document.getElementById("question").src = "prefectures/blank.png";
+	document.getElementById("hint").src = "prefectures/blank.png";
 	document.getElementById("kotae").innerHTML="";
 	
 }
