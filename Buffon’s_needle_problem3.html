@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ビュフォンの針</title>
+<h1>ビュフォンの針のシミュレーション</h1>
+</head>
+	<body>
+	<p>100回の試行を30回行う</p>
+	<div id="pai1" style="font-size: 10pt"></div> 
+    <div id="pai2" style="font-size: 10pt"></div>
+    <div id="pai3" style="font-size: 10pt"></div>
+    <div id="pai4" style="font-size: 10pt"></div>
+	<br>
+	<input type="button" class="btn5" onclick="location.href= 'Buffon’s needle problem3.html'" value="再試行" />
+	<br>
+
+</body>
+<script>
+var list1 = [];
+var list2 = [];
+var list3 = [];
+var list4 = [];
+var m = 0;
+var total=0;
+for (var n=0; n<30; n++){
+
+var i=0;
+var test=100;
+for (var k=0; k<test; k++){
+var theta = Math.random()*2*Math.PI;
+var y0 = 1+ 5*Math.random();
+var y1 = y0 + Math.cos(theta);
+var y2 = Math.floor(y0);
+var y3 = Math.floor(y1);
+
+if ((y2-y3) != 0){i++}
+}
+total = total + test;
+m=m+i;
+list1.push(m);
+list2.push(total)
+var pai= ((2 * total) / m);
+pai = pai.toFixed(3);
+list3.push(pai);
+    var pai0 = ((2 * test) / i);
+    pai0 = pai0.toFixed(3);
+list4.push(pai0);
+document.getElementById("pai1").innerHTML = list1;
+document.getElementById("pai2").innerHTML = list2;
+document.getElementById("pai3").innerHTML = list3;
+document.getElementById("pai4").innerHTML = list4;
+}
+
+</script>
+</html>
