@@ -2,21 +2,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ビュフォンの針（2）</title>
-<h1>ビュフォンの針の問題（2）</h1>
+<title>モンテカルロ法</title>
+<h1>モンテカルロ法による円周率</h1>
 </head>
 	<body>
 	<p>100回の試行を30セット行う</p>
 		<p>累積試行回数</p>
 	<div id="pai2" style="font-size: 10pt"></div> 
-		<p>累積交差回数</p>
+		<p>1以内になった累積回数</p>
     <div id="pai1" style="font-size: 10pt"></div>
 		<p>累積した数値を計算</p>
     <div id="pai3" style="font-size: 10pt"></div>
 		<p>1セットごとの数値を計算</p>
     <div id="pai4" style="font-size: 10pt"></div>
 	<br>
-	<input type="button" style="width:20%;padding:5px;font-size:15px;background-color: aquamarine" onclick="location.href= 'Buffon’s_needle_problem4.html'" value="再試行" />
+	<input type="button" style="width:20%;padding:5px;font-size:15px;background-color: aquamarine" onclick="location.href= 'Monte_Carlo_method.html'" value="再試行" />
 	<br>
 
     <canvas id="myLineChart">
@@ -37,22 +37,19 @@ for (var n=0; n<30; n++){
 var i=0;
 var test=100;
 for (var k=0; k<test; k++){
-var theta = Math.random()*2*Math.PI;
-var y0 = 1+ 5*Math.random();
-var y1 = y0 + Math.cos(theta);
-var y2 = Math.floor(y0);
-var y3 = Math.floor(y1);
+var x = Math.random();
+var y = Math.random();
 
-if ((y2-y3) != 0){i++}
+if ((x**2+y**2) < 1){i++}
 }
 total = total + test;
 m=m+i;
 list1.push(m);
 list2.push(total)
-var pai= ((2 * total) / m);
+var pai= (4 * m / total);
 pai = pai.toFixed(3);
 list3.push(pai);
-    var pai0 = ((2 * test) / i);
+    var pai0 = (4 * i / test);
     pai0 = pai0.toFixed(3);
 list4.push(pai0);
 document.getElementById("pai1").innerHTML = list1;
@@ -72,14 +69,14 @@ document.getElementById("pai4").innerHTML = list4;
          //凡例のラベル
           label: '累積の数値を計算',
           data: list3, //グラフのデータ
-          borderColor: "rgba(243,13,169,1.00)",
+          borderColor: "rgba(242,5,5,1.00)",
           backgroundColor: "rgba(0,0,0,0)"
         },
         {
          //凡例のラベル
           label: '1セットごとの数値を計算',
           data: list4, //グラフのデータ
-          borderColor: "rgba(28,2,242,1.00)",
+          borderColor: "rgba(49,243,6,1.00)",
           backgroundColor: "rgba(0,0,0,0)"
         }
       ],
@@ -93,8 +90,8 @@ document.getElementById("pai4").innerHTML = list4;
       scales: {
         yAxes: [{
           ticks: {
-            suggestedMax: 3.5, //最大値
-            suggestedMin: 2.7, //最小値
+            suggestedMax: 3.4, //最大値
+            suggestedMin: 2.9, //最小値
             stepSize: 0.1, //縦ラベルの数値単位
             callback: function(value, index, values){
               return  value +  '' //縦軸の単位

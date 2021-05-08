@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ビュフォンの針の問題メモ</title>
+</head>
+
+<body>
+	<h1>ビュフォンの針の問題メモ</h1>
+	<img src="Buffon.png" width="300px">
+	<p>針の1端の座標 (x,y)を乱数で決める。<br>
+角度θを2π＊乱数で決めると、もう一端の座標は<br>
+(x+sinθ, y+cosθ)。<br>
+yとy+cosθの小数点以下を切り捨て、差をとる。<br>
+横線に交差しない場合、差は0。<br>
+交差する場合、差は1か-1。<br>
+差がゼロではない針をカウントする。<br>
+</p>
+	<br>
+		<h1>モンテカルロ法メモ</h1>
+	<img src="Monte_Carlo.png" width="300px">
+	<p>点の座標 (x,y)を乱数で決める。<br>
+x**2+Y**2＜1 となる回数を数える<br>
+</p>
+	
+	
+	<br>
+	 <a href="プログラミング練習部屋.html">プログラミングの練習部屋へ</a>
+</body>
+</html>
