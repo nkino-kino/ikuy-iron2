@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>県名クイズ</title>
+<link rel="stylesheet" type="text/css" href="kenmei8.css">
+	<script src="kenmeiq6.js"></script>
+		<h1>都道府県名クイズ</h1>
+	</head>
+<style type="text/css">
+
+table {
+	width: 800px;
+table-layout:fixed;
+border: 1px #2b2b2b solid;
+}
+th {
+	vertical-align: top;
+	width: 400px;
+height: 420px;
+border: 1px #2b2b2b solid;
+}
+
+td {
+	vertical-align: top;
+	width: 400px;
+height: 200px;
+border: 1px #2b2b2b solid;
+	background-color:#FDFDD0;
+	word-wrap: break-word;
+}
+</style>
+<body>
+	<p>まず「シルエット」ボタン（青）を押す。問題番号が記録され、次は違う問題が選ばれる。<br>
+	  47都道府県すべて終わると、同じ画像しか出なくなる。
+	</p>
+<table cellpadding="10px">
+<tr>
+<th bgcolor="#F0E1FD"><button class="btn1" onclick="mondai()">シルエット</button>
+	<br>
+	<image class="siruetto" id="question" style="width:350px"></image>
+</th>
+<th bgcolor="#E1FDF4"><button class="btn2" onclick="nihon()">場所</button>
+	<br>
+	<image class="hinto" id="hint" style="width:350px"></image>
+</th>
+</tr>
+<tr>
+<td><button class="btn3" onclick="kaitou()" >答え</button><br>
+	<br>
+	<div class="kenmei" id="kotae" style="font-size: 40pt" align="center"></div>
+</td>
+<td>
+	<input type="button" class="btn4" onclick="reset()" value="次の問題へ" />
+	<br>
+	<div class="suujic" id="suuji" style="font-size: 30pt"></div>
+	<div class="suujic" id="suuji2" style="font-size: 10pt"></div>
+</td>
+</tr>
+</table>
+	<br>
+	<input type="button" class="btn5" onclick="location.href= 'kenmeiq7.html'" value="全てクリア" />
+	<br>
+
+
+	<br>
+    <a href="プログラミング練習部屋.html">プログラミングの練習部屋へ</a>
+</body>
+</html>
+
