@@ -34,6 +34,9 @@ var list1 = [];
 var list2 = [];
 var list3 = [];
 var list4 = [];
+var list5 = [3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,
+			  3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,
+			  3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14];
 var m = 0;
 var total=0;
 for (var n=0; n<30; n++){
@@ -73,18 +76,24 @@ document.getElementById("pai4").innerHTML = list4;
       labels: list2,
       datasets: [
         {
-         //凡例のラベル
           label: '累積の数値を計算',
           data: list3, //グラフのデータ
           borderColor: "rgba(243,13,169,1.00)",
           backgroundColor: "rgba(0,0,0,0)"
         },
         {
-         //凡例のラベル
-          label: '1セットごとの数値を計算',
+          label: '1セットごとに計算',
           data: list4, //グラフのデータ
           borderColor: "rgba(28,2,242,1.00)",
           backgroundColor: "rgba(0,0,0,0)"
+        },
+		{
+          label: '3.14',
+          data: list5, //グラフのデータ
+          borderColor: "rgba(245,156,1,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+		  pointRadius: 0,
+		  borderDash: [4, 6], 
         }
       ],
     },

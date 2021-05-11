@@ -33,6 +33,9 @@ var list1 = [];
 var list2 = [];
 var list3 = [];
 var list4 = [];
+var list5 = [3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,
+			  3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,
+			  3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14,3.14];
 var m = 0;
 var total=0;
 for (var n=0; n<30; n++){
@@ -77,10 +80,18 @@ document.getElementById("pai4").innerHTML = list4;
         },
         {
          //凡例のラベル
-          label: '1セットごとの数値を計算',
+          label: '1セットごとに計算',
           data: list4, //グラフのデータ
           borderColor: "rgba(49,243,6,1.00)",
           backgroundColor: "rgba(0,0,0,0)"
+        },
+		{
+          label: '3.14',
+          data: list5, //グラフのデータ
+          borderColor: "blue",
+          backgroundColor: "rgba(0,0,0,0)",
+		  pointRadius: 0,
+		  borderDash: [4, 6], 
         }
       ],
     },
