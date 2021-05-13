@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <!--   https://wizardace.com/d3-contours/ -->
+<head>
+  <meta charset="utf-8">
+  <title>D3 Contours Plot</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+ 
+<body>
+	<p>グラフツールでハートを作った。<br>
+	基本の式は(x*x+y*y-1)**3 - x*x*y**3 =0<br>
+	こういうややこしい式では、”z＝ ”の式にして、zの値を等高線として表すんだね。</p>
+  <script>
+  // 1. データの準備
+  var width = 600; // グラフの幅
+  var height = 600; // グラフの高さ
+  function heart(x, y) {
+    return ((x**2+y**2-1)**3+x**2*y**3);
+  }
+  var n = 240;
+  var m = 240;
+  var k = 0;
+  var values = new Array(n * m);
+  for(var j = 0; j < m; ++j) {
+    for(var i = 0; i < n; ++i) {
+      var x = i / (n - 1) * 10 - 5;
+      var y = j / (m - 1) * 10 - 5;
+      values[k] = heart(x, y);
+      ++k;
+    }
+  }
+ 
+  // 2. SVG領域の設定
+  var svg = d3.select("body").append("svg").attr("width", width).attr("height", height);
+ 
+  // 3. しきい値の設定
+  var thresholds = d3.range(0, 15).map(function(p) { return 7*p; });
+ 
+  // 4. データ変換
+  var contours = d3.contours()
+    .size([n, m])
+    .thresholds(thresholds);
+ 
+  // 5. カラースケールの設定
+  var color = d3.scaleSequential(function(t){return d3.hsl(t*230, -1, 0.5) + ""}).domain([140,0]);
+ 
+  // 6. コンター用SVG要素の設定
+  svg.selectAll("path")
+    .data(contours(values))
+    .enter()
+    .append("path")
+    .attr("d", d3.geoPath(d3.geoIdentity().scale(width / n)))
+    .attr("fill", function(d) { return color(d.value); })
+    .attr("stroke","white")
+    .attr("stroke-width","0.5");
+  </script>
+</body>
+ 
+</html>

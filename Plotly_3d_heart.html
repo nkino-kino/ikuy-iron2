@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+function plot(){
+let m = 200;
+a=[], b=[]; c=[];
+for(var i=0;i<=m;i++)
+  {
+	  for(var k=0;k<=m;k++){
+    a_ = (5+Math.cos(i*2*Math.PI/m))*Math.cos(k*2*Math.PI/m); 
+    a.push(a_);
+    
+    b_ = (5+Math.cos(i*2*Math.PI/m))*Math.sin(k*2*Math.PI/m); ; 
+    b.push(b_);
+    
+    c_ = 2*Math.sin(i*2*Math.PI/m); 
+    c.push(c_);
+}
+  }
+
+var data=[
+    {
+      opacity:1.0,
+      x: a,
+      y: b,
+      z: c,
+      type: 'scatter3d',
+      mode: 'markers',
+        marker: {
+        colorscale:'Jet',
+        color: c,
+        size:1
+                }
+    }
+];
+var layout = {
+width: 500,
+height: 500,
+};            
+	Plotly.newPlot('myDiv', data, layout);
+  }
+  
+</script>
+<body onload="plot()">
+	<p>式は、<br>
+		0<θ1<2*pai, 0<θ2<2*pai<br>
+		x=(5+cos(θ1))*cos(θ2)<br>
+		y=(5+sin(θ1))*cos(θ2)<br>
+		z=2*sin(θ1)</p>
+    <div id="myDiv"></div>
+	<br>
+	<br>
+	<a href="プログラミング練習部屋.html">プログラミング練習部屋へ戻る</a>
+	<br>
+	<br>
+</body>
+</html>
