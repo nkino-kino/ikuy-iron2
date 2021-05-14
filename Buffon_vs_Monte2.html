@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>モンテvsビュフォン</title>
+<h1>モンテvsビュフォン</h1>
+</head>
+	<body>
+	<p>それぞれの試行を10000回行い、πに近い方が勝ち。100回勝負。</p>
+	<div id="Monte_list"></div>
+	<div id="Buff_list"></div><br>
+	<div id="Monte" style="font-size: 20pt"></div><br>
+	<div id="Buffon" style="font-size: 20pt"></div>
+	<br>
+	<input type="button" style="width:20%;padding:5px;font-size:15px;background-color: aquamarine"  onclick="location.href= 'Buffon_vs_Monte2.html'" value="再試行" />
+	<br>
+
+	<br>
+    <a href="プログラミング練習部屋.html">プログラミングの練習部屋へ</a>
+</body>
+<script>
+var test=10000;
+var Buff=[];
+var Monte=[];
+
+for (var n=0; n<100; n++){
+var i=0;
+var j=0;
+for (var k=0; k<test; k++){
+	var x=Math.random();
+	var y=Math.random();
+		
+	var theta = x*2*Math.PI;
+	var y0 = 2+5*y;
+	var y1 = y0 + Math.cos(theta);
+	var y2 = Math.floor(y0);
+	var y3 = Math.floor(y1);
+	if ((y2-y3) != 0){i++};
+	if (x*x+y*y<1){j++};
+	}
+	
+	
+	var pai0=(2*test)/i
+	pai0 = pai0.toFixed(3);
+	Buff.push(pai0);
+
+	
+	var pai1=4*j/test
+	pai1 = pai1.toFixed(3);
+	Monte.push(pai1);	
+	}
+
+document.getElementById("Monte_list").innerHTML = "Monte: "+Monte;
+document.getElementById("Buff_list").innerHTML = "Buffon: "+Buff;
+
+var B = 0;
+var Mo = 0;
+for (var m=0; m<Monte.length; m++){
+	sub_Mo=Math.abs(Math.PI-Monte[m]);
+	sub_B=Math.abs(Math.PI-Buff[m]);
+	if (sub_Mo<sub_B){Mo++}
+	else {B++};
+}
+document.getElementById("Monte").innerHTML = "Monte= "+Mo;
+document.getElementById("Buffon").innerHTML = "Buff= "+B;
+</script>
+
+</html>
