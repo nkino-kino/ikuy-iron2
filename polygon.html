@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>正多角形</title>
+<h1>正多角形の面積と円周率</h1>
+</head>
+	<body>
+
+	<canvas id="myLineChart"></canvas><br>
+	<p>n角形</p>
+	<div id="pai0" style="font-size: 10pt"></div> 
+	<p>半径1の円に内接するn角形の面積 A</p>
+	<div id="pai1" style="font-size: 10pt"></div> 
+	<p>半径1の円に外接するn角形の面積 B</p>
+    <div id="pai2" style="font-size: 10pt"></div>
+	<br><br>
+	<input type="button" style="width:20%;padding:5px;font-size:15px;background-color: #EFFF7F" onclick="location.href= 'polygon.html'" value="再試行" />
+	<br>
+	<br>
+	<br>
+	<a href="polygon2.html">多角形、nが大きい時</a>
+	<br>
+	<br>
+	<br>
+	<a href="polygon_memo.html">多角形と円周率、メモはこちら</a>
+	<br>
+	<br>
+	<br>
+    <a href="プログラミング練習部屋.html">プログラミングの練習部屋へ</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<script>
+var list0 = [];
+var list1 = [];
+var list2 = [];
+var list3 = [];
+var list4 = [];
+
+for (var n=3; n<31; n++){
+
+
+var theta = (Math.PI)/n;
+//var y1 = n*(Math.sin(theta))**2/Math.tan(theta); //円が外
+var y1 =n*(Math.sin(theta))*(Math.cos(theta));
+var y2 = n*Math.tan(theta);//円が内
+var y3 = y1.toFixed(4);
+var y4 = y2.toFixed(4);
+	
+list0.push(n);
+list1.push(y3);
+list2.push(y4);
+list3.push(Math.PI);
+
+document.getElementById("pai0").innerHTML = list0;
+document.getElementById("pai1").innerHTML = list1;
+document.getElementById("pai2").innerHTML = list2;
+
+	}
+
+  var ctx = document.getElementById("myLineChart");
+  var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+     //データ項目のラベル
+      labels: list0,
+      datasets: [
+       {
+          label: '半径1の円に内接するn角形',
+          data: list1, //グラフのデータ
+          borderColor: "rgba(193,12,243,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+			tension:0
+        },
+        {
+          label: '半径1の円に外接するn角形',
+          data: list2, //グラフのデータ
+          borderColor: "rgba(1,173,156,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+			tension:0
+        },
+		{
+          label: '3.14',
+          data: list3, //グラフのデータ
+          borderColor: "rgba(245,0,40,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+		  pointRadius: 0,
+		  borderDash: [4, 6], 
+        }
+      ],
+    },
+    options: {
+      title: {
+        display: true,
+       //グラフタイトル
+        text: 'polygon'
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            suggestedMax: 3.5, //最大値
+            suggestedMin: 2.7, //最小値
+            stepSize: 0.1, //縦ラベルの数値単位
+            callback: function(value, index, values){
+              return  value +  '' //縦軸の単位
+            }
+          }
+        }]
+      },
+    }
+  });
+
+</script>
+</body>
+</html>
