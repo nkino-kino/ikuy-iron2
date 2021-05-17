@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>正多角形</title>
 <h1>正多角形の面積と円周率</h1>
+	<p>単位円に内接・外接するn角形の面積を求める</p>
 </head>
 	<body>
 
@@ -65,14 +66,14 @@ document.getElementById("pai4").innerHTML = Math.PI;
       labels: list0,
       datasets: [
        {
-          label: '半径1の円に内接するn角形',
+          label: '内接するn角形の面積',
           data: list1, //グラフのデータ
           borderColor: "rgba(193,12,243,1.00)",
           backgroundColor: "rgba(0,0,0,0)",
 			tension:0
         },
         {
-          label: '半径1の円に外接するn角形',
+          label: '外接するn角形の面積',
           data: list2, //グラフのデータ
           borderColor: "rgba(0,2,173,1.00)",
           backgroundColor: "rgba(0,0,0,0)",
