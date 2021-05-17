@@ -14,9 +14,11 @@
 	<div id="pai1" style="font-size: 20pt"></div> 
 	<p>半径1の円に外接するn角形の面積 B</p>
     <div id="pai2" style="font-size: 20pt"></div>
-	<p>円周率</p>
+	<p>内接・外接n角形の面積の平均</p>
     <div id="pai3" style="font-size: 20pt"></div>
-	<p>1000角形でも小数点第4位くらいまでしか近似できない。</p>
+	<p>円周率</p>
+    <div id="pai4" style="font-size: 20pt"></div>
+	<p>1000角形でも小数点第5位くらいまでしか近似できない。</p>
 	<br>
 	<br>
     <a href="polygon_memo.html">多角形と円周率、メモはこちら</a>
@@ -31,23 +33,27 @@ var list0 = [100,300,1000];
 var list1 = [];
 var list2 = [];
 var list3 = [];
+var list4 = [];
 
 for (var i=0; i<list0.length; i++){
 
 var n = list0[i];
 var theta = (Math.PI)/n;
 //var y1 = n*(Math.sin(theta))**2/Math.tan(theta); //円が外
-var y1 =n*(Math.sin(theta))*(Math.cos(theta));
+var y1 = n*(Math.sin(theta))*(Math.cos(theta));
 var y2 = n*Math.tan(theta);//円が内
+var y3 = (y1+y2)/2;
 	
 list1.push(y1);
 list2.push(y2);
-list3.push(Math.PI);
+list3.push(y3);
+list4.push(Math.PI);
 
 document.getElementById("pai0").innerHTML = list0;
 document.getElementById("pai1").innerHTML = list1;
 document.getElementById("pai2").innerHTML = list2;
-document.getElementById("pai3").innerHTML = Math.PI;
+document.getElementById("pai3").innerHTML = list3;
+document.getElementById("pai4").innerHTML = Math.PI;
 
 	}
 
@@ -68,13 +74,20 @@ document.getElementById("pai3").innerHTML = Math.PI;
         {
           label: '半径1の円に外接するn角形',
           data: list2, //グラフのデータ
+          borderColor: "rgba(0,2,173,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+			tension:0
+        },
+		{
+          label: '平均',
+          data: list3, //グラフのデータ
           borderColor: "rgba(1,173,156,1.00)",
           backgroundColor: "rgba(0,0,0,0)",
 			tension:0
         },
 		{
           label: '3.14',
-          data: list3, //グラフのデータ
+          data: list4, //グラフのデータ
           borderColor: "rgba(245,0,40,1.00)",
           backgroundColor: "rgba(0,0,0,0)",
 		  pointRadius: 0,
