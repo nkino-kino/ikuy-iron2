@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>平方根2</title>
+</head>
+
+<body>
+	<div id = "problem"></div>
+	<div id = "root"></div>
+<script>
+var Pro = [];
+var Ans = [];
+for (var R=0; R<=100; R++){
+var a,b,c,x,y,z;
+Pro.push(R);
+if (R==0){Ans.push(R)}
+else {
+for (a=1; a<=10; a++){
+	if (a**2==R){
+	Ans.push(a);
+    }
+   else if (a**2<R && ((a+1)**2)>R){
+   	x=a;
+   	for (b=0; b<10; b++){
+    	if ((x+b/10)**2<R && (x+(b+1)/10)**2>R){
+      		y=x+b/10;
+      		for (c=0; c<10; c++){
+        		if ((y+c/100)**2<R && (y+(c+1)/100)**2>R){
+          			z=y+c/100;
+					z=z.toFixed(2);
+      				Ans.push(z);
+        }}}}}}}}
+	document.getElementById("problem").innerHTML = Pro;
+	document.getElementById("root").innerHTML = Ans;
+	</script>
+	</body>
+</html>

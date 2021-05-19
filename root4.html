@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>平方根・立方根</title>
+
+</head>
+
+<body>
+	<h1>平方根・立方根</h1>
+	<canvas id="myLineChart"></canvas>
+	<p>0から100まで</p>
+	<div id = "problem" style="font-size: 10pt"></div>
+	<p>平方根</p>
+	<div id = "root2" style="font-size: 10pt"></div>
+	<p>立方根</p>
+	<div id = "root3" style="font-size: 10pt"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<script>
+var Pro = [];
+var Ans = [];
+var Ans3 = [];
+for (var R=0; R<=100; R++){
+var a,b,c,x,y,z;
+Pro.push(R);
+if (R==0){Ans.push(R)}
+else {
+for (a=1; a<=10; a++){
+	if (a**2==R){
+	Ans.push(a);
+    }
+   else if (a**2<R && ((a+1)**2)>R){
+   	x=a;
+   	for (b=0; b<10; b++){
+    	if ((x+b/10)**2<R && (x+(b+1)/10)**2>R){
+      		y=x+b/10;
+      		for (c=0; c<10; c++){
+        		if ((y+c/100)**2<R && (y+(c+1)/100)**2>R){
+          			z=y+c/100;
+					z=z.toFixed(2);
+      				Ans.push(z);
+        }}}}}}}}
+for (var R=0; R<=100; R++){
+var a,b,c,x,y,z;
+
+if (R==0){Ans3.push(R)}
+else {
+for (a=1; a<=10; a++){
+	if (a**3==R){
+	Ans3.push(a);
+    }
+   else if (a**3<R && ((a+1)**3)>R){
+   	x=a;
+   	for (b=0; b<10; b++){
+    	if ((x+b/10)**3<R && (x+(b+1)/10)**3>R){
+      		y=x+b/10;
+      		for (c=0; c<10; c++){
+        		if ((y+c/100)**3<R && (y+(c+1)/100)**3>R){
+          			z=y+c/100;
+					z=z.toFixed(2);
+      				Ans3.push(z);
+        }}}}}}}}
+	document.getElementById("problem").innerHTML = Pro;
+	document.getElementById("root2").innerHTML = Ans;
+	document.getElementById("root3").innerHTML = Ans3;
+	
+	//ぐらふ
+var ctx = document.getElementById("myLineChart");
+var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+     //データ項目のラベル
+      labels: Pro,
+      datasets: [
+       {
+          label: '平方根',
+          data: Ans, //グラフのデータ
+          borderColor: "rgba(193,12,243,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+			tension:0
+        },
+        {
+          label: '立方根',
+          data: Ans3, //グラフのデータ
+          borderColor: "rgba(0,2,173,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+			tension:0
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+       //グラフタイトル
+        text: '平方根・立方根'
+      }
+    }
+  });
+
+	</script>
+	</body>
+</html>
