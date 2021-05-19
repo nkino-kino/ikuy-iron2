@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>三角関数のテーラー展開</title>
+</head>
+
+<body>
+	<div id="kaijo"></div>
+	<div id="xval"></div>
+	<div id="sin"></div>
+	
+<script>
+var kaijo=[];
+var t_list = [];
+var sin_list = [];
+var k=1;
+for (var i=1; i<100; i++){
+	k=k*i;
+	kaijo.push(k);
+}
+document.getElementById("kaijo").innerHTML=kaijo;
+
+
+for (var j=0; j<100; j++){
+	var t=j*(Math.PI/25);
+	t_list.push(t.toFixed(3));
+	var sin=0;
+	for (var n=1; n<50; n++){
+		sin=sin+((-1)**(n+1))*(t**(2*n-1))/kaijo[2*n-2];
+	}
+		sin = sin.toFixed(3);
+		sin_list.push(sin);
+}
+document.getElementById("xval").innerHTML=t_list;
+document.getElementById("sin").innerHTML=sin_list;
+
+</script>
+</body>
+</html>

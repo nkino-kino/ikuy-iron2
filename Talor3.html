@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>三角関数のテーラー展開</title>
+</head>
+
+<body>
+		<h1>三角関数</h1>
+	<canvas id="myLineChart"></canvas>
+	<div id="kaijo"></div>
+	<div id="xval"></div>
+	<div id="sin"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<script>
+var kaijo=[];
+var t_list = [];
+var sin_list = [];
+var k=1;
+for (var i=1; i<100; i++){
+	k=k*i;
+	kaijo.push(k);
+}
+document.getElementById("kaijo").innerHTML=kaijo;
+
+
+for (var j=0; j<100; j++){
+	var t=j*(Math.PI/25);
+	t_list.push(t.toFixed(3));
+	var sin=0;
+	for (var n=1; n<50; n++){
+		sin=sin+((-1)**(n+1))*(t**(2*n-1))/kaijo[2*n-2];
+	}
+		sin = sin.toFixed(3);
+		sin_list.push(sin);
+}
+document.getElementById("xval").innerHTML=t_list;
+document.getElementById("sin").innerHTML=sin_list;
+	
+//ぐらふ
+var ctx = document.getElementById("myLineChart");
+var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+     //データ項目のラベル
+      labels: t_list,
+      datasets: [
+       {
+          label: '平方根',
+          data: sin_list, //グラフのデータ
+          borderColor: "rgba(193,12,243,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+			tension:0
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+       //グラフタイトル
+        text: '平方根・立方根'
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
