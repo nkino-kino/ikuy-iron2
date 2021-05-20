@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>バーンスレイの羊歯</title>
+</head>
+<body>
+<p>フラクタル図形　バーンスレイの羊歯（シダ）</p>
+<canvas id="canvas"> </canvas>
+<div id="xlist"></div>
+<div id="ylist"></div>
+<div id="list"></div>
+<p>原点から出発。<br>
+	次の一歩を以下のように決め、それを一万回繰り返した。<br>
+	85%の確率で<br>
+	　　　x'=0.85x + 0.04y<br>
+	　　　y'=-0.04x + 0.85y + 1.6<br>
+	7%の確率で<br>
+	　　　x' =0.2x - 0.26y<br>
+	　　　y' =-0.23x + 0.22y +1.6<br>
+	7%の確率で<br>
+	　　　x' =-0.15x + 0.28y<br>
+	　　　y' =-0.26x + 0.24y +0.44<br>
+	1%の確率で<br>
+	　　　x' = 0<br>
+	　　　y' = 0.16y
+	</p>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script>
+	var point = 10000;
+	var x=0;
+	var y=0;
+	var x_list=[0];
+	var y_list=[0];
+	for (var i=0; i<point; i++){
+		var t=Math.random();
+		if (t<0.85){
+			x=0.85*x + 0.04*y;
+			y=-0.04*x + 0.85*y + 1.6;
+			x_list.push(x);
+			y_list.push(y);
+		}
+		else if (t>=0.85 && t<0.92){
+			x=0.2*x - 0.26*y;
+			y=-0.23*x + 0.22*y +1.6;
+			x_list.push(x);
+			y_list.push(y);
+		}		
+		else if (t>=0.92 && t<0.99){
+			x=-0.15*x + 0.28*y;
+			y=-0.26*x + 0.24*y +0.44;
+			x_list.push(x);
+			y_list.push(y);
+		}
+		else {
+			x=0;
+			y=0.16*y;
+			x_list.push(x);
+			y_list.push(y);
+		}
+	}
+	//document.getElementById("xlist").innerHTML=x_list;
+	//document.getElementById("ylist").innerHTML=y_list;	
+	var data_list = [];
+for (var j=0; j<x_list.length; j++){
+		var set = {x: x_list[j],y:y_list[j]};
+		data_list.push(set);
+	}
+	//document.getElementById("list").innerHTML=JSON.stringify(data_list);		
+	//グラフ
+	window.chartColors = {
+  red: "#FF0000",
+  green: "#048B04"
+};
+var color = Chart.helpers.color;
+var scatter_data = {
+  datasets:[{
+    label: "schatter dots",
+    borderColor: window.chartColors.green,
+    backgroundColor: color(window.chartColors.green).alpha(0.2).rgbString(),
+    pointRadius: 2,
+
+    data:data_list
+  }]
+};
+
+var ctx = document.getElementById('canvas').getContext('2d');
+window.myScatter = Chart.Scatter(ctx, {
+  data: scatter_data,
+  option:{
+    title: {
+      display: true,
+      text: "Chart.js Scatter Chart"
+    },
+  }
+});
+	</script>
+</body>
+</html>

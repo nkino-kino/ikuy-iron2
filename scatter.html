@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>scatter</title>
+</head>
+
+<body>
+<canvas id="canvas"> </canvas>
+<div id="xlist"></div>
+<div id="ylist"></div>
+<div id="list"></div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script>
+	var x_list=[];
+	var y_list=[];
+	for (var i=0; i<10; i++){
+		var x=Math.random();
+		var y=Math.random();
+			x_list.push(x.toFixed(2));
+			y_list.push(y.toFixed(2));
+		}
+	document.getElementById("xlist").innerHTML=x_list;
+	document.getElementById("ylist").innerHTML=y_list;	
+	var data_list = [];
+for (var j=0; j<x_list.length; j++){
+		var set = {x: x_list[j],y:y_list[j]};
+		data_list.push(set);
+	}
+	document.getElementById("list").innerHTML=JSON.stringify(data_list);	
+	
+	//グラフ
+	window.chartColors = {
+  red: "#FF0000",
+  blue: "#00FF00"
+};
+
+var color = Chart.helpers.color;
+var scatter_data = {
+  datasets:[{
+    label: "schatter dots",
+    borderColor: window.chartColors.red,
+    backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+    pointRadius: 10,
+
+    data:data_list
+  }]
+};
+
+var ctx = document.getElementById('canvas').getContext('2d');
+window.myScatter = Chart.Scatter(ctx, {
+  data: scatter_data,
+  option:{
+    title: {
+      display: true,
+      text: "Chart.js Scatter Chart"
+    },
+  }
+});
+
+	</script>
+	
+</body>
+</html>
