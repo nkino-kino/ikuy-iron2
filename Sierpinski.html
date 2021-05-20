@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>シェルピンスキーの三角形</title>
+</head>
+<body>
+<p>フラクタル図形　シェルピンスキーの三角形</p>
+<canvas id="canvas"> </canvas>
+<div id="xlist"></div>
+<div id="ylist"></div>
+<div id="list"></div>
+<p>原点から出発。<br>
+	次の一歩を以下のように決めて進む。それを一万回繰り返した。<br>
+	1/3の確率で<br>
+　　　　x'=0.5*x;<br>
+　　　　y'=0.5*y;<br>
+	1/3の確率で<br>
+　　　　x'=0.5*x + 0.5;<br>
+　　　　y'=0.5*y + 0.5;<br>
+	1/3の確率で<br>
+　　　　x'=0.5*x + 1;<br>
+　　　　y'=0.5*y;<br>
+	</p>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script>
+	var point = 10000;
+	var x=0;
+	var y=0;
+	var x_list=[0];
+	var y_list=[0];
+	for (var i=0; i<point; i++){
+		var t=Math.random();
+		if (t<0.3333){
+			x=0.5*x;
+			y=0.5*y;
+			x_list.push(x);
+			y_list.push(y);
+		}
+		else if (t>=0.3333 && t<0.6666){
+			x=0.5*x + 0.5;
+			y=0.5*y + 0.5;
+			x_list.push(x);
+			y_list.push(y);
+		}		
+		else {
+			x=0.5*x + 1;
+			y=0.5*y;
+			x_list.push(x);
+			y_list.push(y);
+		}
+	}
+	//document.getElementById("xlist").innerHTML=x_list;
+	//document.getElementById("ylist").innerHTML=y_list;	
+	var data_list = [];
+for (var j=0; j<x_list.length; j++){
+		var set = {x: x_list[j],y:y_list[j]};
+		data_list.push(set);
+	}
+	//document.getElementById("list").innerHTML=JSON.stringify(data_list);		
+	//グラフ
+	window.chartColors = {
+  red: "#FF0000",
+  green: "#048B04"
+};
+var color = Chart.helpers.color;
+var scatter_data = {
+  datasets:[{
+    label: "schatter dots",
+    borderColor: window.chartColors.red,
+    backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+    pointRadius: 2,
+
+    data:data_list
+  }]
+};
+
+var ctx = document.getElementById('canvas').getContext('2d');
+window.myScatter = Chart.Scatter(ctx, {
+  data: scatter_data,
+  option:{
+    title: {
+      display: true,
+      text: "Chart.js Scatter Chart"
+    },
+  }
+});
+	</script>
+</body>
+</html>
