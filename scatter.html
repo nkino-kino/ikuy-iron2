@@ -7,27 +7,49 @@
 
 <body>
 <canvas id="canvas"> </canvas>
-<div id="xlist"></div>
-<div id="ylist"></div>
-<div id="list"></div>
+<div id="x1list"></div>
+<div id="y1list"></div>
+<div id="list1"></div>
+<div id="x2list"></div>
+<div id="y2list"></div>
+<div id="list2"></div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <script>
-	var x_list=[];
-	var y_list=[];
-	for (var i=0; i<10; i++){
-		var x=Math.random();
-		var y=Math.random();
-			x_list.push(x.toFixed(2));
-			y_list.push(y.toFixed(2));
+	var points = 50;
+	// data1 ============================
+	var x1_list=[];
+	var y1_list=[];
+	for (var i=0; i<points; i++){
+		var x1=Math.random()/2;
+		var y1=Math.random()/2;
+			x1_list.push(x1.toFixed(2));
+			y1_list.push(y1.toFixed(2));
 		}
-	document.getElementById("xlist").innerHTML=x_list;
-	document.getElementById("ylist").innerHTML=y_list;	
-	var data_list = [];
-for (var j=0; j<x_list.length; j++){
-		var set = {x: x_list[j],y:y_list[j]};
-		data_list.push(set);
+	document.getElementById("x1list").innerHTML=x1_list;
+	document.getElementById("y1list").innerHTML=y1_list;	
+	var data1_list = [];
+for (var j=0; j<x1_list.length; j++){
+		var set1 = {x: x1_list[j],y:y1_list[j]};
+		data1_list.push(set1);
 	}
-	document.getElementById("list").innerHTML=JSON.stringify(data_list);	
+	document.getElementById("list1").innerHTML=JSON.stringify(data1_list);	
+//data2===============================	
+	var x2_list=[];
+	var y2_list=[];
+	for (var i=0; i<points; i++){
+		var x2=Math.random();
+		var y2=Math.random();
+			x2_list.push(x2.toFixed(2));
+			y2_list.push(y2.toFixed(2));
+		}
+	document.getElementById("x2list").innerHTML=x2_list;
+	document.getElementById("y2list").innerHTML=y2_list;	
+	var data2_list = [];
+for (var j=0; j<x2_list.length; j++){
+		var set2 = {x: x2_list[j],y:y2_list[j]};
+		data2_list.push(set2);
+	}
+	document.getElementById("list2").innerHTML=JSON.stringify(data2_list);	
 	
 	//グラフ
 	window.chartColors = {
@@ -38,12 +60,20 @@ for (var j=0; j<x_list.length; j++){
 var color = Chart.helpers.color;
 var scatter_data = {
   datasets:[{
-    label: "schatter dots",
+    label: "schatter dots1",
     borderColor: window.chartColors.red,
     backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
     pointRadius: 10,
 
-    data:data_list
+    data:data1_list
+  },
+		   {
+    label: "schatter dots2",
+    borderColor: window.chartColors.blue,
+    backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
+    pointRadius: 10,
+
+    data:data2_list
   }]
 };
 
