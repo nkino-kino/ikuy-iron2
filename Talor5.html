@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>三角関数のテイラー展開</title>
+</head>
+
+<body>
+		<h1>三角関数のテイラー展開</h1>
+	<p>説明は下に。</p>
+	<canvas id="myLineChart"></canvas>
+	<!--p>階乗の配列の準備</p><div id="kaijo"></div-->
+	<p>角度（π/20 ずつ120段階（6πまで））</p><div id="xval"></div>
+	<p>sin（展開の項数は50）</p><div id="sin"></div>
+	<p>cos（展開の項数は50）</p><div id="cos"></div>
+	<br>
+	<image src="images/talor_memo.jpg" width="70%"></image>
+	<br>
+	<a href="http://www.yamamo10.jp/yamamoto/lecture/2006/3E/2nd/html/node2.html">こちらのページを参考にしました。</a>
+	<br><br>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<script>
+var kaijo=[1];
+var t_list = [];
+var sin_list = [];
+var cos_list = [];
+var k=1;
+for (var i=1; i<100; i++){
+	k=k*i;
+	kaijo.push(k);
+}
+//document.getElementById("kaijo").innerHTML=kaijo;
+
+//sin
+for (var j=0; j<121; j++){
+	var t=j*(Math.PI/20);
+	t_list.push(t.toFixed(3));
+	var sin=0;
+	for (var n=1; n<50; n++){
+		sin=sin+((-1)**(n+1))*(t**(2*n-1))/kaijo[2*n-1];
+	}
+		sin = sin.toFixed(3);
+		sin_list.push(sin);
+}
+//cos
+for (var p=0; p<121; p++){
+	var t=p*(Math.PI/20);
+	var cos=0;
+	for (var m=0; m<50; m++){
+		cos=cos+((-1)**m)*(t**(2*m))/kaijo[2*m];
+	}
+		cos = cos.toFixed(3);
+		cos_list.push(cos);
+}
+document.getElementById("xval").innerHTML=t_list;
+document.getElementById("sin").innerHTML=sin_list;
+document.getElementById("cos").innerHTML=cos_list;
+	
+//ぐらふ
+var ctx = document.getElementById("myLineChart");
+var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+     //データ項目のラベル
+      labels: t_list,
+      datasets: [
+       {
+          label: 'sin',
+          data: sin_list, //グラフのデータ
+          borderColor: "rgba(243,11,24,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+			tension:0
+        },
+		{
+          label: 'cos',
+          data: cos_list, //グラフのデータ
+          borderColor: "rgba(43,244,58,1.00)",
+          backgroundColor: "rgba(0,0,0,0)",
+			tension:0
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+       //グラフタイトル
+        text: '三角関数のテイラー展開'
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
