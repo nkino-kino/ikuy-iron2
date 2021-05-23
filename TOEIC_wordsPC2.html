@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TOEIC英単語</title>
+<link rel="stylesheet" type="text/css" href="TOEIC_wordsPC.css">
+	<script src="TOEIC_wordsPC.js"></script>
+	<!--script src="要素取得4PC.js"></script-->
+	</head>
+
+<body>
+	<h1>TOEIC英単語</h1>
+	<div class="test1" id="test1"></div><br>
+	<div class="test2" id="test2"></div>
+
+	<p>英-英単語帳。「new word」ボタンを押すと、1250個くらいの単語が番号順に出てくる。「戻る」ボタンにバグがあるけど２度押しすれば使える。</p>
+		<br>
+	<button class="btn1" onclick="getword()">new word</button>
+	<p>word </p><br><br>
+		<div class="number" id="number"></div><br>
+		<div class="TOEIC" id="TOEIC"></div><br>
+<p>=========================================</p>
+	<p> definition </p><br>
+		<!--button class="btn2" onclick="define()">DEFINITION</button--><br>
+	<div id="definition"></div><br>
+		<br>
+
+	<button class="btn3" onclick="back()">一つ戻る</button><br>
+
+	<br>
+	<p>============　　途中からはじめたい時　　============</p>　
+	<div><input type="text" class="wordnum" id="wordnum">
+	<button class="btn4" onclick="inputnum()">番号入力</button></div><br>
+	
+	<br>	
+	<a href="プログラミング練習部屋.html">前のページへ戻る</a>	
+	<br>
+</body>
+</html>
+
