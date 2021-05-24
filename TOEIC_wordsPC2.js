@@ -27,7 +27,17 @@ function createArray(csvData) {
     for(var i = 0; i<tempArray.length;i++){
 	csvArray[i] = tempArray[i].split(",");
 	}	
+	var word_array = Array.from(csvArray[x][1]);
+	var hint1=[];
+	for (var i=0; i<word_array.length; i++){
+		if (i%2==0){
+			hint1.push(word_array[i]);}
+		else {hint1.push("-");}
+		}
+		var array = hint1.join('');
+
 	document.getElementById("definition").innerHTML=(csvArray[x][2]);
+	document.getElementById("hint").innerHTML=array;
 }
 function hyouji(){
 	document.getElementById("TOEIC").innerHTML=(csvArray[x][1]);
