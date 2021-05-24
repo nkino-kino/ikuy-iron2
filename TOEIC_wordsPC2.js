@@ -14,13 +14,14 @@ function createXMLHttpRequest() {
     XMLhttpObject = new XMLHttpRequest();
     return XMLhttpObject;
 }
-var csvArray = [];
-var min = 1;
+
+
+function createArray(csvData) {
+	var csvArray = [];
+	var min = 1;
 	var max = 1253;
 	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
 	var x = parseInt(a);
-
-function createArray(csvData) {
 	
 	var tempArray = csvData.split("\n");
     for(var i = 0; i<tempArray.length;i++){
