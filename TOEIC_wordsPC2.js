@@ -14,9 +14,9 @@ function createXMLHttpRequest() {
     XMLhttpObject = new XMLHttpRequest();
     return XMLhttpObject;
 }
-
+var csvArray = [];
 function createArray(csvData) {
-	var csvArray = [];
+	
 	var tempArray = csvData.split("\n");
     for(var i = 0; i<tempArray.length;i++){
 	csvArray[i] = tempArray[i].split(",");
@@ -28,6 +28,8 @@ function createArray(csvData) {
 	var x = parseInt(a);
 		
 	document.getElementById("definition").innerHTML=(csvArray[x][2]);
+}
+function hyouji()
 	document.getElementById("TOEIC").innerHTML=(csvArray[x][1]);
 }
 
