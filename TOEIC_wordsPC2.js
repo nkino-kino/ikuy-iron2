@@ -27,8 +27,8 @@ function createArray(csvData) {
 	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
 	var x = parseInt(a);
 */		
-	document.getElementById("TOEIC").innerHTML=(csvArray[10][1])
-	document.getElementById("definition").innerHTML=(csvArray[10][2])
+	document.getElementById("TOEIC").innerHTML=(csvArray[10][1]);
+	document.getElementById("definition").innerHTML=(csvArray[10][2]);
 }
 
 
