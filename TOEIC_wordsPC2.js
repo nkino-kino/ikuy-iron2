@@ -40,7 +40,5 @@ function createArray(csvData) {
 	document.getElementById("hint").innerHTML=array;
 }
 
-function hyouji(){
-	document.getElementById("TOEIC").innerHTML=(csvArray[x][1]);
-}
+
 
