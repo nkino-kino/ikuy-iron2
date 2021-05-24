@@ -22,13 +22,13 @@ function createArray(csvData) {
 	csvArray[i] = tempArray[i].split(",");
 	}
 		
-	/*var min = 1;
+	var min = 1;
 	var max = 1253;
 	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
 	var x = parseInt(a);
-*/		
-	document.getElementById("TOEIC").innerHTML=(csvArray[10][1]);
-	document.getElementById("definition").innerHTML=(csvArray[10][2]);
+		
+	document.getElementById("TOEIC").innerHTML=(csvArray[x][1]);
+	document.getElementById("definition").innerHTML=(csvArray[x][2]);
 }
 
 
