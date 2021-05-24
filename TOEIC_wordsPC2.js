@@ -1,3 +1,9 @@
+	var csvArray = [];
+	var min = 1;
+	var max = 1253;
+	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
+	var x = parseInt(a);
+
 function getword() {
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
@@ -16,12 +22,9 @@ function createXMLHttpRequest() {
 }
 
 
+
+
 function createArray(csvData) {
-	var csvArray = [];
-	var min = 1;
-	var max = 1253;
-	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
-	var x = parseInt(a);
 	
 	var tempArray = csvData.split("\n");
     for(var i = 0; i<tempArray.length;i++){
@@ -40,5 +43,8 @@ function createArray(csvData) {
 	document.getElementById("hint").innerHTML=array;
 }
 
+	function hyouji(){
+	document.getElementById("TOEIC").innerHTML=(csvArray[x][1]);
+}
 
 
