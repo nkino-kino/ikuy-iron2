@@ -36,7 +36,7 @@ function createArray(csvData) {
 		}
 		var array = hint1.join('');
 
-	document.getElementById("definition").innerHTML=(csvArray[x][2]);
+	document.getElementById("definition").innerHTML=csvArray[x][2];
 	document.getElementById("hint").innerHTML=array;
 }
 
