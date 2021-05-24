@@ -30,7 +30,7 @@ function createArray(csvData) {
 	var word_array = Array.from(csvArray[x][1]);
 	var hint1=[];
 	for (var j=0; j<word_array.length; j++){
-		if (i%2==0){
+		if (j%2==0){
 			hint1.push(word_array[j]);}
 		else {hint1.push("-");}
 		}
