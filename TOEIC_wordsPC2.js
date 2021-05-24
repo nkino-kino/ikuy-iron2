@@ -25,10 +25,7 @@ function createArray(csvData) {
 	var tempArray = csvData.split("\n");
     for(var i = 0; i<tempArray.length;i++){
 	csvArray[i] = tempArray[i].split(",");
-	}
-		
-	
-		
+	}	
 	document.getElementById("definition").innerHTML=(csvArray[x][2]);
 }
 function hyouji(){
