@@ -29,9 +29,9 @@ function createArray(csvData) {
 	}	
 	var word_array = Array.from(csvArray[x][1]);
 	var hint1=[];
-	for (var i=0; i<word_array.length; i++){
+	for (var j=0; j<word_array.length; j++){
 		if (i%2==0){
-			hint1.push(word_array[i]);}
+			hint1.push(word_array[j]);}
 		else {hint1.push("-");}
 		}
 		var array = hint1.join('');
