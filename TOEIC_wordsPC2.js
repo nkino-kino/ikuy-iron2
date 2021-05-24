@@ -15,6 +15,11 @@ function createXMLHttpRequest() {
     return XMLhttpObject;
 }
 var csvArray = [];
+var min = 1;
+	var max = 1253;
+	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
+	var x = parseInt(a);
+
 function createArray(csvData) {
 	
 	var tempArray = csvData.split("\n");
@@ -22,14 +27,11 @@ function createArray(csvData) {
 	csvArray[i] = tempArray[i].split(",");
 	}
 		
-	var min = 1;
-	var max = 1253;
-	var a = Math.floor(Math.random() * (max + 1 - min)) + min;
-	var x = parseInt(a);
+	
 		
 	document.getElementById("definition").innerHTML=(csvArray[x][2]);
 }
-function hyouji()
+function hyouji(){
 	document.getElementById("TOEIC").innerHTML=(csvArray[x][1]);
 }
 
