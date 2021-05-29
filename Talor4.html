@@ -30,23 +30,24 @@ for (var i=1; i<50; i++){
 	kaijo.push(k);
 }
 document.getElementById("kaijo").innerHTML=kaijo;
-
+var kaisuu=141;
+var tenkai=24;
 //sin
-for (var j=0; j<101; j++){
+for (var j=0; j<kaisuu; j++){
 	var t=j*(Math.PI/25);
 	t_list.push(t.toFixed(3));
 	var sin=0;
-	for (var n=1; n<20; n++){
+	for (var n=1; n<tenkai; n++){
 		sin=sin+((-1)**(n+1))*(t**(2*n-1))/kaijo[2*n-1];
 	}
 		sin = sin.toFixed(3);
 		sin_list.push(sin);
 }
 //cos
-for (var p=0; p<101; p++){
+for (var p=0; p<kaisuu; p++){
 	var t=p*(Math.PI/25);
 	var cos=0;
-	for (var m=0; m<20; m++){
+	for (var m=0; m<tenkai; m++){
 		cos=cos+((-1)**m)*(t**(2*m))/kaijo[2*m];
 	}
 		cos = cos.toFixed(3);
