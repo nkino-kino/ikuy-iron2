@@ -21,9 +21,9 @@ p = itertools.permutations(list, 9)　←全ての順列をリスト化
 <br><br>
 for v in p:　　　　　　　　　　　←全ての順列について代入して計算
 <br>
-　　(a,b,c,d,e,f,g,h,i)=v  
+　　(a,b,c,d,e,f,g,h,i) = v  
 		<br>
-　　k=a/(10*b+c)+d/(10*e+f)+g/(10*h+i)
+　　k = a/(10*b+c)+d/(10*e+f)+g/(10*h+i)
 		<br>
 　　if k == 1:　　　　　　　　←答えが1だったらその順列を出力
 		<br>
