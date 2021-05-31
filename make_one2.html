@@ -9,23 +9,25 @@
 <body>
 	<p>答えは</p>
 	<img src="mondai2.png" width="500">
-	<p>最初、Javascriptで解こうと思ったけど技量不足でできず、<br>
-		数学ツールの揃っているPythonで解いた。<br>
+	<p>一項目は3/4、後ろ2項は通分して足すと17/68 = 1/4。<br>
+		最初、Javascriptで解こうと思ったけど技量不足でできず、<br>
+		（順列のリストが作れなかった）、<br>
+		数学ツールの使えるPythonで解いた。<br>
 		コードはこんな感じ。</p>
 <br>
-import itertools　　　　　　　　　←モジュールを呼び出し
+import itertools　　　　　　　　　　　　　←数学モジュール呼び出し
 <br><br>
-list = [1,2,3,4,5,6,7,8,9]　　　　　　　←数字のリスト
+list = [1,2,3,4,5,6,7,8,9]　　　　　　　←使う数字のリスト
 <br><br>
-p = itertools.permutations(list, 9)　←全ての順列をリスト化
+p = itertools.permutations(list, 9)　　←順番を入れ替えた順列のリスト
 <br><br>
-for v in p:　　　　　　　　　　　←全ての順列について代入して計算
+for v in p:　　　　　　　　　　　　　　　　←全ての順列について計算
 <br>
 　　(a,b,c,d,e,f,g,h,i) = v  
 		<br>
 　　k = a/(10*b+c)+d/(10*e+f)+g/(10*h+i)
 		<br>
-　　if k == 1:　　　　　　　　←答えが1だったらその順列を出力
+　　if k == 1:　　　　　　　　　　　　　　　←答えが1だったらその順列を出力
 		<br>
 　　　　print(v)<br><br>		
 		
